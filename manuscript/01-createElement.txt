@@ -1,24 +1,31 @@
 # Create Elements
+You can use JavaScript to create DOM elements.
 
-## NOTES
+`document.createElement("h1")`
 
-* How you create elements in React
-* Similar to how you createElements with DOM APIs
-* Just like with the DOM API, we've only created an element, we need to mount it.
+In React you can use the same verbiage to create a React Element.
 
-## RESOURCES
+`React.createElement("h1")`
 
-* [docs](http://facebook.github.io/react/docs/top-level-api.html#react.createelement)
+This is where the similarities end. React makes it much nicer to append children. We can add some greeting text to this element like so.
 
-## CODE
+`React.createElement("h1", {}, "Hello")`
 
-```
-document.createElement("h1")
-React.createElement("h1")
-```
+The first argument is the tag name, the third is the innerText but what's the second? It's where optional properties get sent it. We'll talk about that later. For, just leave it as an empty object.
 
-```
-React.createElement("h1", {}, "Hi")
-```
+We haven't learned how to put this in our page yet. So, let's `console.log` it to make sure it was created.
 
-While you won't see much many uses of `createElement` in the wild, you might see it with a `null` instead of `{}`. Don't worry to much about this difference. `{}` is roughly equivalent to `new Object()`. Code that uses `null` is being careful not to instantiate any new objects. You won't need to worry about that for any of the examples in the. And, in 2 chapters I'll show you how to never think about it again.
+`console.log(React.createElement("h1", {}, "Hi"))`
+
+Opening up our developer console, we'll see specification object for this new element.
+
+`
+{
+  $$typeof: Symbol(react.element),
+  /* frameworky stuff */
+  props: { children: "hi" },
+  type: "h1",
+}
+`
+
+That's how we create elements using React. But it only exists in memory. Let's render it to the DOM.

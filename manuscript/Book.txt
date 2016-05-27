@@ -1,4 +1,5 @@
 start-here.txt
+assumptions.txt
 00-a-basic-setup.txt
 01-createElement.txt
 02-render.txt

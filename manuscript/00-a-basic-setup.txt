@@ -1,17 +1,13 @@
 # A Basic Setup
+Everything in this book fits nicely into a single HTML file.
 
-## NOTES
+There are hundreds of ways to write React apps. None of that is critical for learning about React. Here's an HTML file with everything you need to get started.
 
-* Why I'm not talking a lot about setup. Changes frequently, platform dependent, etc.
-* Why are there 2 libraries? Which does what?
-* What's Babel?
+This file includes 3 libraries: `React`, `ReactDOM` and `Babel-core`. We'll cover what each of those are responsible for in the 11 lessons to follow.
 
-## RESOURCES
+Put all your code in the script tag that is `type="text/babel"`.
 
-* [React.js Getting Started](http://facebook.github.io/react/docs/getting-started.html)
-* [React.js Starter Kit](http://facebook.github.io/react/downloads.html)
-
-## CODE
+## Copy and paste this HTML
 
 ```
 <!DOCTYPE html>
@@ -28,7 +24,7 @@
   <div id="root"></div>
   <script type="text/babel">
 
-    // all code goes here
+  // all code goes here
 
   </script>
 </body>
