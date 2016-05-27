@@ -1,3 +1,5 @@
+![Start Here Graphic](images/start-here.png)
+
 # es2015
 
 * This appendix covers converting the components we created into es2015 syntax.
