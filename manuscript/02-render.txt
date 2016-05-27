@@ -1,0 +1,16 @@
+# ReactDOM.render
+
+## NOTES
+
+* ReactDOM.render has one job. Insert React elements into DOM nodes.
+* Only part of React that touches the DOM.
+* Separate library because React can be used in more places than the browser—React Native, et al.
+
+## CODE
+
+```
+ReactDOM.render(
+  React.createElement("h1", {}, "Hi"),
+  document.getElementById("root")
+)
+```

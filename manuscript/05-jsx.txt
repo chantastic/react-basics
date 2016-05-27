@@ -1,0 +1,21 @@
+# JSX
+
+## NOTES
+
+* Self closing tags
+* How props become like HTML attributes
+* Curlies... for evaluating JavaScript expressions
+  * literally any javascript expression.
+
+## CODE
+
+```
+var Greeting = function (props) {
+  return <div>Hi { props.name }</div>
+}
+
+ReactDOM.render(
+  <Greeting name="Chan" />,
+  document.getElementById("root")
+)
+```

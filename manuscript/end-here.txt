@@ -1,0 +1,12 @@
+# End Here
+
+You've done great. If you made it this far, you know enough about React to start building something.
+
+Go, push the boundaries of what you know. You'll find out what you don't know. When you have some questions, move onto the next book.
+
+Here are some ideas to get the creative juices flowing.
+
+* Add other interactions to go along with our Click state. How many times a user scrolls, hits a key, or hovers.
+* Write a component that fetches character info from one of the characters in the SWAPI or POKEAPI and presents it in a nice format. Bonus points if you use one component to handle state and pass them to another component with props.
+  * The ids for both APIs are auto-incrementing. Start with id 1. Add a button that allows someone to go forward and backword through profiles.
+* Create a stopwatch using setInterval to increment a timer

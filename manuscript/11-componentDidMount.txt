@@ -1,0 +1,50 @@
+# componentDidMount
+
+## NOTES
+
+* componentDidMount is where you can interact with data providers
+* this could be requesting data with AJAX, creating a websocket connection, etc.
+* here we'll use setState to pretend like we're requesting some data with latency.
+* notice that we have have to keep a reference to our component to use inside of the setTimout function.
+
+## RESOURCES
+
+## CODE
+
+```
+var ClickCounter = React.createClass({
+  getInitialState: function () {
+    return { clicks: 0 }
+  },
+
+  componentDidMount: function () {
+    var component = this
+
+    return setTimeout(function () {
+      component.setState({ clicks: 100 })
+    }, 500)
+  },
+
+  handleClick: function () {
+     this.setState({ clicks: this.state.clicks + 1 })
+  },
+
+  render: function () {
+    return <div onClick={this.handleClick}>
+      {this.props.children}
+      clicks: {this.state.clicks}
+    </div>
+  }
+})
+
+var Greeting = function (props) {
+  return <div>{props.name}</div>
+}
+
+ReactDOM.render(
+  <ClickCounter>
+    <Greeting name="Michael Chan" />
+  </ClickCounter>,
+  document.getElementById("root")
+)
+```

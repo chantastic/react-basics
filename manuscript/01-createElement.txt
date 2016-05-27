@@ -1,0 +1,24 @@
+# Create Elements
+
+## NOTES
+
+* How you create elements in React
+* Similar to how you createElements with DOM APIs
+* Just like with the DOM API, we've only created an element, we need to mount it.
+
+## RESOURCES
+
+* [docs](http://facebook.github.io/react/docs/top-level-api.html#react.createelement)
+
+## CODE
+
+```
+document.createElement("h1")
+React.createElement("h1")
+```
+
+```
+React.createElement("h1", {}, "Hi")
+```
+
+While you won't see much many uses of `createElement` in the wild, you might see it with a `null` instead of `{}`. Don't worry to much about this difference. `{}` is roughly equivalent to `new Object()`. Code that uses `null` is being careful not to instantiate any new objects. You won't need to worry about that for any of the examples in the. And, in 2 chapters I'll show you how to never think about it again.

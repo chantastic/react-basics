@@ -1,0 +1,46 @@
+# createClass
+
+## NOTES
+
+* our Greeting component is great. it does everything we need. so, I'm going to shift gears.
+* keep Greeting around. we'll need it later. I'm not going to be making any further changes to it.
+* render out ClickCounter.
+* createClass is the second method for defining components.
+  * this is the most complex of the three methods of creating components.
+  * i reference is kept, which allows us to keep some state. Here's it's the number of clicks.
+* where functional components can only enact on their arguments, elementns created with createClass have a backing instance. all that means is that we can assign and read values from `this`. We'l talk about `this` in the next chapter.
+
+* createClass is a function
+  * that takes a specification object
+  * required to have at least one property
+  * a render function
+  * which returns a single React element.
+
+There's a lot there. So I'm going to repeat it, now that you've seen the code.
+
+* createClass is a funcition.
+  * it takes an object as it's only argument.
+  * the object specifies the component.
+  * the specification object MUST have a render function
+  * that render function must return a ReactElement.
+
+* crateClass
+  * object
+    * render
+      * ReactEelement
+
+
+## CODE
+
+```
+var ClickCounter = React.creatClass({
+  render: function () {
+    return <div>clicks: 0</div>
+  }
+})
+
+ReactDOM.render(
+  <ClickCounter />,
+  document.getElementById("root")
+)
+```

@@ -1,0 +1,36 @@
+# A Basic Setup
+
+## NOTES
+
+* Why I'm not talking a lot about setup. Changes frequently, platform dependent, etc.
+* Why are there 2 libraries? Which does what?
+* What's Babel?
+
+## RESOURCES
+
+* [React.js Getting Started](http://facebook.github.io/react/docs/getting-started.html)
+* [React.js Starter Kit](http://facebook.github.io/react/downloads.html)
+
+## CODE
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>learnreact.com — React Basics</title>
+  <script src="https://fb.me/react-15.0.2.js"></script>
+  <script src="https://fb.me/react-dom-15.0.2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+
+    // all code goes here
+
+  </script>
+</body>
+</html>
+```

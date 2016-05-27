@@ -1,0 +1,51 @@
+# Component
+
+* I mentioned a third way to define components
+* This third way is only availabel with ES2015.
+  * It uses ES2015 `class` to define component classes, much like `createClass`
+* The biggest benefit is interoperability with 3rd-party tools like IDEs, command-line tools, and editors.
+* Less magic provided out-of-the-box than `createClass`
+
+## Class
+
+We'll take the ClickCounter component from ES2015 and see what it looks like as a class.
+
+### Steps
+* `var` becomes `class`
+* `=` becomes `extends`
+* `createClass` becomes `Component`
+* `getInitialState` becomes a constructor object called `state`
+* when you define a constructor, you have to `super(props)`
+* remove the surrounding parenthesis
+* remove the commas between method definitions
+
+
+```
+class ClickCounter extends React.createClass {
+  constructor(props) {
+    super(props)
+    this.state = { clicks: 0 }
+  }
+
+  componentDidMount() {
+    var component = this
+
+    return setTimeout(function () {
+      component.setState({ clicks: 100 })
+    }, 500)
+  }
+
+  handleClick() {
+     this.setState({ clicks: this.state.clicks + 1 })
+  }
+
+  render() {
+    return <div onClick={this.handleClick}>
+      {this.props.children}
+      clicks: {this.state.clicks}
+    </div>
+  }
+}
+```
+
+As we talk more about React, I'll share more of the differences between createClass and Component. For practical reasnons, you can use either as you seed fit. Both are currently supprted by React, while doing largely the same thing.

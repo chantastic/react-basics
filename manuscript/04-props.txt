@@ -1,0 +1,24 @@
+# props
+
+## NOTES
+
+* props are used for communication between components.
+* they're the second parameter of createElement
+* the object you pass in comes through as props.
+  * technically, we could call this anything in our function BUT
+    It's convention to use props, for consistency with other
+    methods of creating components.
+* now, when i said function components were simple, this is all they do. They're literally just functions. They take arguments and return a React element for rendering.
+
+## CODE
+
+```
+var Greeting = function (props) {
+  return React.createElement("div", {}, "Hi " + props.name)
+}
+
+ReactDOM.render(
+  React.createElement(Greeting, { name: "Chan" }),
+  document.getElementById("root")
+)
+```

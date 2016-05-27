@@ -1,0 +1,17 @@
+# Start Here
+
+I like small book with pictures. This is one of those books for React.js.
+
+You can write React apps after learning 9 things. This book teaches you those 9 things, in the right order.
+
+React offers more than the 11 things in this book. As a beginner, ignore them. They don't exist. Your job is just to start.
+
+Start Here.
+
+
+## Assumptions
+
+* You understand HTML, script tags and what not
+* You are familiar enough to your browsers Dev Tools to log data to a console
+* You want to learn things and not just sound cool at nerd-parties
+* That's it

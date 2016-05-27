@@ -1,0 +1,25 @@
+# Components
+
+## NOTES
+
+* There are 3 ways to define React Components.
+* This one is the easiest. It's also the most limited.
+* We'll get to the others when we need them.
+* Create element takes a string "div", "span", etc.
+  * strings map 1:1 to HTML tags.
+* Create element also takes functions. In this case, we're using our Greeting component.
+
+* Now this is pretty boring. If we're going to have reusable components, they need to be customizable.
+
+## CODE
+
+```
+var Greeting = function () {
+  return React.createElement("h1", {}, "Hi")
+}
+
+ReactDOM.render(
+  React.createElement(Greeting),
+  document.getElementById("root")
+)
+```

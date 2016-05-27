@@ -1,0 +1,33 @@
+# Event Handlers
+
+## NOTES
+
+* When you were a young developer, you told that writing "onclick", right on a DOM Node was bad.
+* There are two big reasons why, both of which don't apply to you. React solves the intent.
+  * about progressive enhancement
+  * about event delegation
+  * onclick !== onClick
+* Start with a simple alert, popup the next value.
+* We're seeing our first value for `this`.
+  * Our render function says that we
+
+## CODE
+
+```
+var ClickCounter = React.creatClass({
+  handleClick: function () {
+     alert(0 + 1)
+  },
+
+  render: function () {
+    return <div onClick={this.handleClick}>
+      clicks: 0
+    </div>
+  }
+})
+
+ReactDOM.render(
+  <ClickCounter />,
+  document.getElementById("root")
+)
+```
