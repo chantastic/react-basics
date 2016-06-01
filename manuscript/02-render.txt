@@ -1,16 +1,35 @@
 # ReactDOM.render
 
-## NOTES
+## What's ReactDOM?
 
-* ReactDOM.render has one job. Insert React elements into DOM nodes.
-* Only part of React that touches the DOM.
-* Separate library because React can be used in more places than the browser—React Native, et al.
+ReactDOM is a tiny library for transforming React elements (we know what those are now!) into DOM elemnts and inserting the into the DOM.
 
-## CODE
+This is referred to as "mounting" a React element.
+
+## `ReactDOM.render` mounts components to the DOM
+
+Now that we know the verbiage, let's "mount" or component to the DOM using `ReactDOM.render`.
+
+`ReactDOM.render` requires only one React Element and one DOM element container.
 
 ```
 ReactDOM.render(
-  React.createElement("h1", {}, "Hi"),
+  /* A React Element */,
+  /* A DOM Element Container */
+)
+```
+
+Use the React Element that we created in the last chapter.
+
+For the DOM Node, use the element that I included in "a basic setup". We can select by using `document.getElementById`.
+
+```
+ReactDOM.render(
+  React.createElement("h1", { children: "Hi" }),
   document.getElementById("root")
 )
 ```
+
+## Hurray!
+
+You mounted your first React component! Make a sandwhich. The rest is easy.
