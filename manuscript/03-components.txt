@@ -1,21 +1,37 @@
 # Components
 
-## NOTES
+I'm going to be talk about "components." They're all the rage, right?
 
-* There are 3 ways to define React Components.
-* This one is the easiest. It's also the most limited.
-* We'll get to the others when we need them.
-* Create element takes a string "div", "span", etc.
-  * strings map 1:1 to HTML tags.
-* Create element also takes functions. In this case, we're using our Greeting component.
+Well keep an watchful eye because it kinda looks like React components are just functions.
 
-* Now this is pretty boring. If we're going to have reusable components, they need to be customizable.
+# Making Components
 
-## CODE
+Making components is easy. Let's make a React component of our React Element that displays "Hi" in an `h1`.
+
+Create a new variable named `Greeting`. Greeting is a function that returns our React element.
 
 ```
 var Greeting = function () {
-  return React.createElement("h1", {}, "Hi")
+  return React.createElement("h1", { children: "Hi" })
+}
+```
+
+# Rendering Components
+
+To render our component, call `createElement` with `Greeting`.
+
+```
+ReactDOM.render(
+  React.createElement(Greeting),
+  document.getElementById("root")
+)
+```
+
+All together, it should look like this.
+
+```
+var Greeting = function () {
+  return React.createElement("h1", { children: "Hi" })
 }
 
 ReactDOM.render(
@@ -23,3 +39,11 @@ ReactDOM.render(
   document.getElementById("root")
 )
 ```
+
+## createElement takes functions
+
+The big takeaway here is that `createElement` creates React elements from functions as well as string types. We use this to create custom components.
+
+## How do I make it dynamic?
+
+Now you're thinking in React. In the next chapter we'll look at how to use that special object that `createElment` takes to make our custom component more dynamic.
