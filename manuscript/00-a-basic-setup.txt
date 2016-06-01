@@ -1,13 +1,10 @@
 # A Basic Setup
-Everything in this book fits nicely into a single HTML file.
 
-There are hundreds of ways to write React apps. None of that is critical for learning about React. Here's an HTML file with everything you need to get started.
-
-This file includes 3 libraries: `React`, `ReactDOM` and `Babel-core`. We'll cover what each of those are responsible for in the 11 lessons to follow.
-
-Put all your code in the script tag that is `type="text/babel"`.
+All examples in this book fit nicely into a single HTML file. Every site on the internet requires at least one HTML file. So, we're in good company.
 
 ## Copy and paste this HTML
+
+This basic HTML file is the basis for the first four chapters. Copy it into an HTML file on you computer. Open it in a browser and your favorite code editor.
 
 ```
 <!DOCTYPE html>
@@ -15,18 +12,22 @@ Put all your code in the script tag that is `type="text/babel"`.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>learnreact.com — React Basics</title>
+
   <script src="https://fb.me/react-15.0.2.js"></script>
   <script src="https://fb.me/react-dom-15.0.2.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 </head>
 <body>
   <div id="root"></div>
-  <script type="text/babel">
 
-  // all code goes here
-
+  <script>
+    // all code goes here
   </script>
 </body>
 </html>
 ```
+
+## What comes after chapter 4?
+
+You're already jumping ahead.
+
+We're going to make 2 small changes to support React's optional (but invaluable) JSX syntax.
