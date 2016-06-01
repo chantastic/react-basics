@@ -10,18 +10,20 @@ This is referred to as "mounting" a React element.
 
 Now that we know the verbiage, let's "mount" or component to the DOM using `ReactDOM.render`.
 
-`ReactDOM.render` requires only one React Element and one DOM element container.
+`ReactDOM.render` requires only one React element and one DOM element container.
 
 ```
 ReactDOM.render(
-  /* A React Element */,
-  /* A DOM Element Container */
+  /* React element */,
+  /* DOM element Container */
 )
 ```
 
-Use the React Element that we created in the last chapter.
+Use the React Element that we created in the last chapter and the DOM elemenent
 
 For the DOM Node, use the element that I included in "a basic setup". We can select by using `document.getElementById`.
+
+All together, it should look like this.
 
 ```
 ReactDOM.render(
@@ -32,4 +34,4 @@ ReactDOM.render(
 
 ## Hurray!
 
-You mounted your first React component! Make a sandwhich. The rest is easy.
+You mounted your first React component! Make yourself a sandwich and bask in the glory.
