@@ -1,31 +1,50 @@
-# Create Elements
-You can use JavaScript to create DOM elements.
+# Creating Elements
 
-`document.createElement("h1")`
+This chapter is the most jargon and nonsense I'm gonna throw at you. Make it through and you're golden.
 
-In React you can use the same verbiage to create a React Element.
+## What's a webpage?
+
+A webpage is just a bunch of DOM elements. No DOM? No elements? No page. Simple as that.
+
+You can declare elements in a bunch of ways. We used HTML to create a create an few elements in the setup chapter. We could also use JavaScript to declare elements using `document.createElement`.
+
+So, our first goal is to create elements using React.
+
+## React.createElement
+
+Here's how you create an `h1` element with React.
 
 `React.createElement("h1")`
 
-This is where the similarities end. React makes it much nicer to append children. We can add some greeting text to this element like so.
+That was painless. We simply call `React.createElement` and provide the type of element we want to render. Breezy.
 
-`React.createElement("h1", {}, "Hello")`
+## `createElement` optional arguments
 
-The first argument is the tag name, the third is the innerText but what's the second? It's where optional properties get sent it. We'll talk about that later. For, just leave it as an empty object.
+Now, and empty `h1` is nearly as boring as nothing at all. So `createElement` additional arguments to spice things up. Let's talk briefly about the second argument.
 
-We haven't learned how to put this in our page yet. So, let's `console.log` it to make sure it was created.
+The second arument should be an object. What goes inside the object is up to us. To kick things off, I'll use special [property named `children`] [1]
 
-`console.log(React.createElement("h1", {}, "Hi"))`
+`React.createElement("h1", { children: "Hi" })`
 
-Opening up our developer console, we'll see specification object for this new element.
+## What are React elements?
+
+React elements are instructions for creating DOM elements. Log this `createElement` expression to your browser console to see what this instruction set looks like.
+
+`console.log(React.createElement("h1", { children: "Hi" }))`
+
+It should look somethingc like this:
 
 `
 {
   $$typeof: Symbol(react.element),
-  /* frameworky stuff */
+  /* a bunch of frameworky stuff */
   props: { children: "hi" },
   type: "h1",
 }
 `
 
-That's how we create elements using React. But it only exists in memory. Let's render it to the DOM.
+## I have element creation instructions, now what?
+
+Next we need shove them into the browser DOM. For that we'll use the `ReactDOM` library we included.
+
+[1] There are only a handful of special propreties to React. This is one of them.
