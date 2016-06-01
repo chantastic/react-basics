@@ -1,5 +1,5 @@
 # Assumptions
 
-You don't need to know anything about React. I'll cover it from the ground up.
+You need to know elementary HTML and feel compfortable with basic JavaScript syntax. You don't need to know any React. That's my job.
 
-If you're not comfortable with basic HTML and JavaScript, you might feel a little lost. You'll need to setup a basic HTML document with script tags, create a few variables, functions and objects. If that sounds like it's within you're understanding, you're good to go.
+Do you know how to setup a basic HTML file and open it in a browse? Can you use JavaScript to asign variables and define functions and objects? You're probably good. Keep reading.
