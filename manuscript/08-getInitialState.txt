@@ -12,7 +12,7 @@
 
 ## CODE
 
-```
+``` js
 var ClickCounter = React.creatClass({
   getInitialState: function () {
     return { clicks: 0 }
@@ -35,7 +35,7 @@ ReactDOM.render(
 )
 ```
 
-```
+``` js
 var ClickCounter = React.creatClass({
   getInitialState: function () {
     return { clicks: 0 }
