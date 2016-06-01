@@ -1,20 +1,39 @@
 # props
 
-## NOTES
+Remember that special object we used to make our `h1` element say "Hi"?
 
-* props are used for communication between components.
-* they're the second parameter of createElement
-* the object you pass in comes through as props.
-  * technically, we could call this anything in our function BUT
-    It's convention to use props, for consistency with other
-    methods of creating components.
-* now, when i said function components were simple, this is all they do. They're literally just functions. They take arguments and return a React element for rendering.
+We can use that same object with our custom component `Greeting`. Here, I'm just passing an object with a name property.
 
-## CODE
+```
+ReactDOM.render(
+  React.createElement(Greeting, { name: "Chan" }),
+  document.getElementById("root")
+)
+```
+
+## We call this special object "props"
+
+We've used this special object twice. It's seems fitting to call it by it's name. We call this the `props` object. Every component recieves props. We can put any values we want on the `props` object. It's how we give values to our components.
+
+This helps us make our components dynamic.
+
+## Rendering values from props
+
+Update the `Greeting` function expression to accept the `props` object.
+
+Now, instead of simply displaying "Hi", let's append the `name` on the `props` object.
 
 ```
 var Greeting = function (props) {
-  return React.createElement("div", {}, "Hi " + props.name)
+  return React.createElement("h1", { children: "Hi " + props.name })
+}
+```
+
+All together, it should look like this:
+
+```
+var Greeting = function (props) {
+  return React.createElement("h1", { children: "Hi " + props.name })
 }
 
 ReactDOM.render(
@@ -22,3 +41,13 @@ ReactDOM.render(
   document.getElementById("root")
 )
 ```
+
+## props are values communicated to components
+
+The `props` object is how we communicate values into components. In fact, it's the only way to communicate data into components.
+
+All components take props. The custome components that we create and those who's types are DOM elements.
+
+## Now, for something completely different
+
+We've talked a lot about custom components and DOM element components. It'd be nice to have a way writing these components that felt familiar, the way HTML feels familiar.
