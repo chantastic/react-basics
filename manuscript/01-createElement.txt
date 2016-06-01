@@ -1,50 +1,57 @@
 # Creating Elements
 
-This chapter is the most jargon and nonsense I'm gonna throw at you. Make it through and you're golden.
+This chapter includes the most jargon and nonsense I'll gonna throw at you.
 
-## What's a webpage?
+## What's a web page?
 
-A webpage is just a bunch of DOM elements. No DOM? No elements? No page. Simple as that.
+A webpage is just a bunch of DOM elements. No DOM? No elements? No page. Pretty simple.
 
-You can declare elements in a bunch of ways. We used HTML to create a create an few elements in the setup chapter. We could also use JavaScript to declare elements using `document.createElement`.
+We declare elements in different ways, depending on the language used.
 
-So, our first goal is to create elements using React.
+We used HTML to create a few elements in the setup chapter. We can also declare elements in JavaScript using `document.createElement`.
+
+So, how do we create elements with React?
 
 ## React.createElement
 
-Here's how you create an `h1` element with React.
+Here's how to create an `h1` element with React.
 
-`React.createElement("h1")`
+```
+React.createElement("h1")
+```
 
-That was painless. We simply call `React.createElement` and provide the type of element we want to render. Breezy.
+Pretty painless. We call `React.createElement` and pass it the type of element we want to render.
 
-## `createElement` optional arguments
+## Optional (but important) arguments
 
-Now, and empty `h1` is nearly as boring as nothing at all. So `createElement` additional arguments to spice things up. Let's talk briefly about the second argument.
+An empty `h1` is nearly as boring as nothing at all. `createElement` takes additional arguments to spice things up.
 
-The second arument should be an object. What goes inside the object is up to us. To kick things off, I'll use special [property named `children`] [1]
+The second argument it takes is an object. What goes inside is up to us. To kick things off, I'll use special [property named `children`][1]
 
-`React.createElement("h1", { children: "Hi" })`
+```
+React.createElement("h1", { children: "Hi" })
+```
 
 ## What are React elements?
 
-React elements are instructions for creating DOM elements. Log this `createElement` expression to your browser console to see what this instruction set looks like.
+React can't do anything you can't do in JavaScript proper. But it can provide some convieniences. React elements are instructions for creating DOM elements.
+
+Log this `createElement` expression to your browser console to see what this instruction set looks like.
 
 `console.log(React.createElement("h1", { children: "Hi" }))`
 
 It should look somethingc like this:
 
-`
+```
 {
-  $$typeof: Symbol(react.element),
   /* a bunch of frameworky stuff */
   props: { children: "hi" },
   type: "h1",
 }
-`
+```
 
-## I have element creation instructions, now what?
+We see that `createElement` creates a new object. It includes the `type` and special object we passed in.
 
-Next we need shove them into the browser DOM. For that we'll use the `ReactDOM` library we included.
+## Ok. So, I have DOM element blue print. How does that become a DOM element?
 
-[1] There are only a handful of special propreties to React. This is one of them.
+Now that we've created a Recat element, we need make DOM elemnts and shove them into the DOM. For that we'll use the `ReactDOM`.
