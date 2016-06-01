@@ -1,9 +1,11 @@
 # Start Here
 
-I like small book with pictures. This is that book for React.js Basics.
+I like small book with pictures. This is the small-book-with-pictures book for React.js Basics.
 
-You can write React apps after learning 11 things. This book teaches you those 11 things in the right order.
+This book is about React Basics. That means we're going to cover the basics of React. You won't have to symultaniously learn Babel, ES2015, Webpack, and Redux. We'll just cover the basics. You'll just start learning React.
 
-This book isn't a comprehensive guide to React. There are plenty of those you wont Read. This is the book that helps you build you first components and send you on your way.
+There are 10 or so concepts you need to lodge in your head to start making React work. This book covers those 10-or-so concepts. That's it.
 
-Start Here.
+So, if you want to start using React and have about 45 minutes, this book is for you.
+
+Let's begin.
