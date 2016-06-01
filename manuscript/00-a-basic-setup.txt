@@ -30,4 +30,4 @@ This basic HTML file is the basis for the first four chapters. Copy it into an H
 
 You're already jumping ahead.
 
-We're going to make 2 small changes to support React's optional (but invaluable) JSX syntax.
+We're going to make two small changes to support React's optional (but invaluable) JSX syntax.
