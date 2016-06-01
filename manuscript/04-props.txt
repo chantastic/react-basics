@@ -4,12 +4,12 @@ Remember that special object we used to make our `h1` element say "Hi"?
 
 We can use that same object with our custom component `Greeting`. Here, I'm just passing an object with a name property.
 
-```
+~~~ javascript
 ReactDOM.render(
   React.createElement(Greeting, { name: "Chan" }),
   document.getElementById("root")
 )
-```
+~~~
 
 ## We call this special object "props"
 
@@ -23,7 +23,7 @@ Update the `Greeting` function expression to accept the `props` object.
 
 Now, instead of simply displaying "Hi", let's append the `name` on the `props` object.
 
-```
+``` javascript
 var Greeting = function (props) {
   return React.createElement("h1", { children: "Hi " + props.name })
 }
@@ -31,7 +31,7 @@ var Greeting = function (props) {
 
 All together, it should look like this:
 
-```
+``` js
 var Greeting = function (props) {
   return React.createElement("h1", { children: "Hi " + props.name })
 }
