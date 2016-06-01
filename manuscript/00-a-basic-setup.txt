@@ -6,7 +6,7 @@ All examples in this book fit nicely into a single HTML file. Every site on the 
 
 This basic HTML file is the basis for the first four chapters. Copy it into an HTML file on you computer. Open it in a browser and your favorite code editor.
 
-```
+~~~
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +24,7 @@ This basic HTML file is the basis for the first four chapters. Copy it into an H
   </script>
 </body>
 </html>
-```
+~~~
 
 ## What comes after chapter 4?
 
