@@ -1,21 +1,91 @@
 # JSX
 
-## NOTES
+## What's this JSX thing?
 
-* Self closing tags
-* How props become like HTML attributes
-* Curlies... for evaluating JavaScript expressions
-  * literally any javascript expression.
+JSX is a way to write create React elements that looks like HTML.
 
-## CODE
+Until this chapter, we're created elements using `React.createElement`:
+
+```js
+React.createElement("h1", { children: "Hi" })
+```
+
+JSX syntax for writing the same thing in XML:
 
 ```
-var Greeting = function (props) {
-  return <div>Hi { props.name }</div>
-}
-
-ReactDOM.render(
-  <Greeting name="Chan" />,
-  document.getElementById("root")
-)
+<h1>Hi</h1>
 ```
+
+## How do I use JSX?
+
+If we give the browser JSX, it's gonna camplain. Actually, it'll just through up its hands and give up.
+
+We need a way of transforming `<h1>Hi</h1>` to `React.createElement("h1", { children: "Hi" })` before the browser tries interpretting it.
+
+These are the [same thing] [1].
+
+## JSX in your app
+
+There are a number of strategies and they're build-dependent. So, if you end up liking React, you're going to need it'll be up to you to determine how best to transform React in your app. The tools are out Rails, .NET, Node.js, etc.
+
+He're we're going to focus on the thing that doesn't really change between most: Babel.
+
+## What's Babel?
+
+Babel a JavaScript transformer. It's a general JavaScript tool for transforming various dialects of JavaScript to browser-ready code. Most notebly it is used to transform new ES2015 JavaScript to cross-browser compatible ES5 that legacy browsers can run.
+
+Babel makes it easy to tranform JSX to plain ol' JavaScript.
+
+## How do I make it work in an HTML page?
+
+Make two changes to your HTML file to make Babel transform JSX in this HTML document.
+
+### 1. Add the `babel-core` script tag to the head of your document.
+
+```
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+```
+
+### 2. Update the your `<script>` tag to be type `text/babel`.
+```
+  <script type="text=babel">
+    // all your code
+  </script>
+```
+
+## It should look like this:
+
+```
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <script src="https://fb.me/react-15.0.2.js"></script>
+  <script src="https://fb.me/react-dom-15.0.2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text=babel">
+    // all code goes here
+  </script>
+</body>
+</html>
+```
+
+## I'm still confused
+
+You don't need to understand JSX to learn React. If you're still a little confused, that's fine. It will slowly stort to make sense as you use it.
+
+The important part, for this book, is just that you get the HTML example working. Then you can keep learning React.
+
+In most cases you'll either be joining a team where JSX is setup or using a platform where adding JSX support is a couple lines of well-documented configuration.
+
+[1] Not *exactly* the same thing. But we're gonna get to `children` later.
+
+## TODO
+* interpolating values in JSX
+* self-closing
