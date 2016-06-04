@@ -1,22 +1,12 @@
 # A Basic Setup
 
-## The uncomplicated setup
-
-All examples in this book fit nicely into a single HTML file.
-
-Every site on the internet requires at least one HTML file.
-
-## Copy and paste this into a local HTML file
-
-Copy this HTML into a file on your computer. Open it up an a browser and your favorite editor. Also, be connected to the internet.
+*Copy and paste this into file on your computer.* Open it in a browser and your favorite editor. Replace the `// write code here` comment with examples in this book.
 
 ```
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-
   <script src="https://fb.me/react-15.0.2.js"></script>
   <script src="https://fb.me/react-dom-15.0.2.js"></script>
 </head>
@@ -24,7 +14,7 @@ Copy this HTML into a file on your computer. Open it up an a browser and your fa
   <div id="root"></div>
 
   <script>
-    // all code goes here
+    // write code here
   </script>
 </body>
 </html>

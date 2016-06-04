@@ -5,10 +5,8 @@
 * You *don't* know anything about React.js.
 * You have an interest in learning React and not gaining jargon for nerd cocktail parties.
 
-## You can use React anywhere
+You can use React anywhere.
 
-You can use React anywhere. So I can't make assumptions about what your app looks like.
+I can't assume you're using React on the same platform that I am. So I'll get into React as quickly as possible. For that reason, I'm going to start with an HTML file with a few script tags.
 
-My goal is to get into React as quickly as possible. We'll use the simplest starting point I know: an HTML file with a few script tags.
-
-Once you've learned React you can move to any platform/framework/stack you like.
+Once you've learned the basics of React, you can use it wherever you. Chances are someone has already figured out how.
