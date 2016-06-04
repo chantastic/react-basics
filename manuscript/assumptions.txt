@@ -1,5 +1,11 @@
 # Assumptions
 
-You need to know elementary HTML and feel compfortable with basic JavaScript syntax. You don't need to know any React. That's my job.
+I assume you know elementary HTML and JavaScript. You don't need to know anything about React. That's my job.
 
-Do you know how to setup a basic HTML file and open it in a browse? Can you use JavaScript to asign variables and define functions and objects? You're probably good. Keep reading.
+I assume you know how to make an HTML file, edit it, and open it in a browser.
+
+I assume you know what JavaScript functions, variables, and objects look and can identify them.
+
+I don't make any assumptions about where you'll be using React. We'll setup an HTML document using pre-built scripts so we can get into React quickly. From there, you can take your React knowledge to any platform/framework/stack you want.
+
+I assume you have an interest in learning React and not just learning jargon for nerd cocktail parties.
