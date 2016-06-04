@@ -1,63 +1,60 @@
 # JSX
 
-## What's this JSX thing?
+This chapter is going to be like a game of 20 questions. It's hard to talk about JSX any other way.
 
-JSX is a way to write create React elements that looks like HTML.
+## What's JSX?
 
-Until this chapter, we're created elements using `React.createElement`:
+JSX is a way to write `React.createElement` that reads like HTML.
+
+These two lines are [identical] [1]:
 
 ```js
+// JavaScript
 React.createElement("h1", { children: "Hi" })
-```
 
-JSX syntax for writing the same thing in XML:
-
-```
+// JSX
 <h1>Hi</h1>
 ```
 
-## How do I use JSX?
+## How can I use JSX?
 
-If we give the browser JSX, it's gonna camplain. Actually, it'll just through up its hands and give up.
+You can't. Not without a JavaScript transformer.
 
-We need a way of transforming `<h1>Hi</h1>` to `React.createElement("h1", { children: "Hi" })` before the browser tries interpretting it.
+## What's a JavaScript transformer?
 
-These are the [same thing] [1].
+A JavaScript transformer takes JavaScript of one form and transforms it to JavaScript of another.
 
-## JSX in your app
+In our case, we'd like to write fancy-pants JSX and transform it to plain-old JavaScript for the browser to understand.
 
-There are a number of strategies and they're build-dependent. So, if you end up liking React, you're going to need it'll be up to you to determine how best to transform React in your app. The tools are out Rails, .NET, Node.js, etc.
+## Where do I get a JavaScript transformer?
 
-He're we're going to focus on the thing that doesn't really change between most: Babel.
+There are a number of JavaScript transformers. The most popular one is [Babel](http://babeljs.io/). And fortunately, it has the best support for JSX.
 
 ## What's Babel?
 
-Babel a JavaScript transformer. It's a general JavaScript tool for transforming various dialects of JavaScript to browser-ready code. Most notebly it is used to transform new ES2015 JavaScript to cross-browser compatible ES5 that legacy browsers can run.
+Babel is a configurable, pluggable JavaScript transformer. It does a lot.
 
-Babel makes it easy to tranform JSX to plain ol' JavaScript.
+We only need it to transform `<h1>Hi</hi>` into `React.createClass("h1", { children: "Hi" })`.
+
+## How do I use JSX in my app?
+
+That depends on what type of app writing. Fortunately there are a lot of good resources for Rails, .NET, Node, Phoenix, and others.
+
+For our purposes, we just need it to work in our HTML page.
 
 ## How do I make it work in an HTML page?
 
-Make two changes to your HTML file to make Babel transform JSX in this HTML document.
+I thought you'd never ask.
 
-### 1. Add the `babel-core` script tag to the head of your document.
+## Copy and Paste this into your HTML file
 
-```
-<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-```
+We make two updates to our HTML file to support JSX.
+* Add `babel-core` *(version 5.8.23)*
+* Update our script tag to be `type="text/babel"`
 
-### 2. Update the your `<script>` tag to be type `text/babel`.
-```
-  <script type="text=babel">
-    // all your code
-  </script>
-```
-
-## It should look like this:
+The new `head` should look like this:
 
 ```
-<!DOCTYPE html>
-<html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -66,26 +63,113 @@ Make two changes to your HTML file to make Babel transform JSX in this HTML docu
   <script src="https://fb.me/react-dom-15.0.2.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 </head>
-<body>
-  <div id="root"></div>
-
-  <script type="text=babel">
-    // all code goes here
-  </script>
-</body>
-</html>
 ```
+
+The updated `script` tag should look like this.
+
+```
+<script type="text/babel">
+  // all the code
+</script>
+```
+
+## What does type="text/babel" do?
+
+A `script` tag without a `type` must be plain old JavaScript.
+
+Adding the `type="text/babel"` attribute means that we expect Babel to transform the script before it's evaluated as JavaScript.
 
 ## I'm still confused
 
-You don't need to understand JSX to learn React. If you're still a little confused, that's fine. It will slowly stort to make sense as you use it.
+You don't need to understand JSX to learn React.
 
-The important part, for this book, is just that you get the HTML example working. Then you can keep learning React.
+What you need to know is why `return <div>whatever</div>` doesn't result in a syntax error. The reason is JSX and Babel.
 
-In most cases you'll either be joining a team where JSX is setup or using a platform where adding JSX support is a couple lines of well-documented configuration.
+You'll understand what's going as you use it more.
 
-[1] Not *exactly* the same thing. But we're gonna get to `children` later.
+## How do I update the components we've already written to JSX?
 
-## TODO
-* interpolating values in JSX
-* self-closing
+Plain old JavaScript:
+
+```
+var Greeting = function (props) {
+  return React.createElement("h1", { children: "Hi " + props.name })
+}
+
+ReactDOM.render(
+  React.createElement(Greeting, { name: "Chan" }),
+  document.getElementById("root")
+)
+```
+
+Babel-transformed, JSX hotness:
+
+```
+var Greeting = function (props) {
+  return <h1>Hi {props.name}</h1>
+}
+
+ReactDOM.render(
+  <Greeting name="Chan" />,
+  document.getElementById("root")
+)
+```
+
+## What do the curly braces do?
+
+In JSX, anything side curly braces will be evaluated as an expression.
+
+```
+{1 + 1} // 2
+{"Howdy"} // Howdy
+{(function (){ return "Yo!" })()} // Yo!
+{props.name} // Chan
+```
+
+## Do custom components have need a Capital first letter?
+
+Yes.
+
+First, you should Pascal Case all classes.
+
+Second, this communicates to Babel whether or not you are providing a component Class.
+
+```
+<div /> // React.createClass("div")
+<Div /> // React.createClass(Div)
+
+<greeting /> // React.createClass("greeting")
+<Greeting /> // React.createClass(Greeting)
+```
+
+Babel transforms any lowercase JSX tags to strings and any capitalized JSX tags to JavaScript variables.
+
+If you use a lowercase JSX tag, React will attempt to create a native DOM element with that name.
+
+## Are all JSX tags self-closing?
+
+Yup.
+
+These are identical in JSX:
+
+```
+<div />
+<div></div>
+```
+
+These are similar. We'll learn why not identical in another book.
+
+```
+<div children="Hi" />
+<div>Hi</div>
+```
+
+## Whew!
+
+You made it. Time for coffee, or kambucha, or something.
+
+JSX is interesting. It's important to learn because all React documentation uses it.
+
+Unfortunately, the JSX abstraction is "[leaky](http://www.joelonsoftware.com/articles/LeakyAbstractions.html)." You'll do well to always remember that JSX syntax is just a wrapper around `React.createClass`.
+
+[1] OK. Not *exactly* the identical. I'll show you how I lied a little bit here later in the book.
