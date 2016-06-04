@@ -1,12 +1,16 @@
 # A Basic Setup
 
-All examples in this book fit nicely into a single HTML file. Every site on the internet requires at least one HTML file. So, we're in good company.
+## The uncomplicated setup
 
-## Copy and paste this HTML
+All examples in this book fit nicely into a single HTML file.
 
-This basic HTML file is the basis for the first four chapters. Copy it into an HTML file on you computer. Open it in a browser and your favorite code editor.
+Every site on the internet requires at least one HTML file.
 
-~~~
+## Copy and paste this into a local HTML file
+
+Copy this HTML into a file on your computer. Open it up an a browser and your favorite editor. Also, be connected to the internet.
+
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,10 +28,4 @@ This basic HTML file is the basis for the first four chapters. Copy it into an H
   </script>
 </body>
 </html>
-~~~
-
-## What comes after chapter 4?
-
-You're already jumping ahead.
-
-We're going to make two small changes to support React's optional (but invaluable) JSX syntax.
+```

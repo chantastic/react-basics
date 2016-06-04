@@ -1,11 +1,14 @@
 # Assumptions
 
-* I assume you know elementary HTML and JavaScript. You don't need to know anything about React. That's my job.
+* You know elementary HTML.
+* You know elementary JavaScript.
+* You *don't* know anything about React.js.
+* You have an interest in learning React and not gaining jargon for nerd cocktail parties.
 
-* I assume you know how to make an HTML file, edit it, and open it in a browser.
+## You can use React anywhere
 
-* I assume you know what JavaScript functions, variables, and objects look and can identify them.
+You can use React anywhere. So I can't make assumptions about what your app looks like.
 
-* I assume that you could be using React in any number of frameworks on any number of platforms. So, I don't make assumptions about how our apps will be built and run. This book uses a single HTML document with pre-built scripts. Once you've developed a working knowledge of React, you can adapt it to any platform/framework/stack you want.
+My goal is to get into React as quickly as possible. We'll use the simplest starting point I know: an HTML file with a few script tags.
 
-* I assume you have an interest in learning React and not gaining jargon for nerd cocktail parties.
+Once you've learned React you can move to any platform/framework/stack you like.
