@@ -1,8 +1,29 @@
 # createClass
 
+## Two types of components
+
+There are two types of components in React.
+
+We've only talked about functional components at this point. They take props and render a component. This is beautifully simple. However, applications need a place to keep state. The components we've created can't do that.
+
+## Yadda-yadda, blah-blah, backing instance and stuff
+
+Here's a little more jargon.
+
+If we want to keep state in our components. The components need a backing instance. If we have instances, we need some type of class to derive all of the instsances from. This is where `React.createClass` comes in.
+
+## createClass
+
+`React.createClass` gives us a way to create components with a backing instance. This gives us a place to hang state.
+
+## What's state?
+
+State is data that changes over time. It's also data that we own.
+
+We'll observe the affects of state by creating a component that responds to click events. With each click it will increase a local counter and re-render.
+
 ## NOTES
 
-* our Greeting component is great. it does everything we need. so, I'm going to shift gears.
 * keep Greeting around. we'll need it later. I'm not going to be making any further changes to it.
 * render out ClickCounter.
 * createClass is the second method for defining components.

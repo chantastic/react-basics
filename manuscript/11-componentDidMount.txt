@@ -1,15 +1,22 @@
 # componentDidMount
 
-## NOTES
+`componentDidMount` is an function that fires right after a component is mounted for the first time.
 
-* componentDidMount is where you can interact with data providers
-* this could be requesting data with AJAX, creating a websocket connection, etc.
-* here we'll use setState to pretend like we're requesting some data with latency.
-* notice that we have have to keep a reference to our component to use inside of the setTimout function.
+It's an extremely useful function in React. It gives you a place to fire off AJAX events, make a websocket connection, or fiddle with the DOM.
 
-## RESOURCES
+## Fetching Component Data
 
-## CODE
+We're going to use this function to provide a an initial state for our component.
+
+In our example, we'll use a `setTimeout` to simulate an asynchronous callback. In reality, you'd likely make an AJAX request or connect to websockets.
+
+Say we want to connect to the server and gather how many times a user has clicked on my name over the lifetime of our app, we can can request that inital data using `componentDidMount`.
+
+## Ugh, this
+
+Inside the `componentDidMount` we have to keep a reference to `this`. And use that in our timeout function. Fortunately, it's super easy.
+
+We'll talk in the chapters about ES6, how to do all this in one line.
 
 ```
 var ClickCounter = React.createClass({
