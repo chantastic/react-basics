@@ -1,30 +1,15 @@
 # What's a React Element?
 
-*React Element*s are like blue prints for creating DOM elements. They are plain old JavaScript objects with a few special properties. Their lightweight and power the famed performance of React. When passed to *ReactDOM.render* they're transformed into DOM elements and inserted into the page.
-
-This whole block should start to make a little bit of sense now.
-
-```js
-ReactDOM.render(
-  React.createElement('div', { children: "Hi there" }),
-  document.getElementById("root")
-);
-```
-
-We're doing three things:
-
-1. __Creating a new *React Element*__, using *React.createElement*
-1. __Querying a reference to our single DOM element__, using *document.getElementById*
-1. __Rendering our *React Element* into the DOM element container__, using *React.render*
+*React Element*s are like blue prints for DOM elements. They are plain old JavaScript objects with a handful of special properties. They're lightweight and empower the famed performance of React. When passed to *ReactDOM.render* they're transformed into DOM elements.
 
 ### Try it out
 
-You can see what a React Element looks like by logging it to your Dev Tools console.
+You can see what a *React Element* looks like by logging it to your Dev Tools console.
 
 Paste this line into your console:
 
 ```js
-console.log(React.createElement('div', { children: "Hi" }));
+console.log(React.createElement('h1', { children: "Hi" }));
 ```
 
 The returned object should look something like this:
@@ -37,4 +22,6 @@ The returned object should look something like this:
 }
 ```
 
-That's our React Element—our DOM element blueprint.
+### Try it out
+
+Fiddle around a bit. Change the *type* and *props* object and see how the output changes.

@@ -1,13 +1,18 @@
-# Assumptions
+# Assumptions & Goals
+
+## What you know and don't know
 
 * You **know** elementary HTML.
 * You **know** elementary JavaScript.
 * You **know** what the DOM is.
 * You **don't** know anything about React.js.
-* You **have** an interest in learning React and not gaining jargon for nerd cocktail parties.
 
-React can be used anywhere.
+## As little jargon as possible
 
-My goal is to get into React as quickly as possible. For that reason, I'm start with an HTML file and a few script tags.
+I won't use much jargon. Where there's verbiage you need to know, I'll do my best to ease into it.
 
-Once you've learned the basics of React, find out insert into your desired platform. Chances are someone has already figured out how.
+If you want to half-learn terms to impress your friends at a nerd cocktail party, this book isn't for you. If you want to you want to full-learn terms and shame your friends at a nerd cocktail party, this book is for you.
+
+## Starting with HTML
+
+I want to get to React as quickly. So, I'll start with HTML. It's easy and we can address other platforms in later.

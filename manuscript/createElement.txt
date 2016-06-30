@@ -1,22 +1,32 @@
 # createElement
 
-This line creates a *React Element*.
+This line creates a *React Element*:
 
 ```js
 React.createElement('div', { children: 'Hi there' }),
 ```
 
-*React.createElement* takes two arguments. The first is required, the second is optional.
+*React.createElement* takes two arguments. The first is required, the second is optional (but necessary).
 
-* First, __tag type (as a String)__
-* Second, __an object of properties__
+## Element type
 
-In this example, I'm using the *children*, a special proper that (in this case) provides the *innerText* element.
+The first argument is the Element type. It can be a *String* or a *Function*. For any known DOM elements, you'll use a *String*, e.g., *'div'*, *'span'*, *'h2'*, *'anchor'*, etc.
+
+## props
+
+The second argument is known as the *props* object. Right now that shouldn't mean much to you. Here's what you need to know now:
+
+* You can put key/value pairs you want in the *props* object.
+* Some keys are special.
+
+In this example, I'm using one of the special keys: *children*. This special property is providing the *innerText* of element.
+
+*We'll talk about which *props* get special treatment later.*
 
 #### Try it out
 
-To get your hands dirty change these things:
+To get your hands dirty, change these things:
 
-* __Change element type from `div` to `h1`__. The text should be bigger and bolder now.
-* __Remove the properties object__. No text will be displayed but if you peak in the inspector, the empty element will be rendered.
-* __Put the object back, add your own greeting__. "You're a handsome|beautiful devil; What's your name" works.
+* __Change the element type from `div` to `h1`__. The text should be bigger and bolder now.
+* __Remove the *props* object altogether__. No text will be displayed but peaking in the inspector, you'll see that empty element was rendered.
+* __Put the props object back and change the greeting__. "You're a handsome|beautiful devil; What's your name" works.

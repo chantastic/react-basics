@@ -2,10 +2,10 @@
 
 This book is about React Basics.
 
-There are 10 or so concepts you need to lodge in your brain if you want to work in React.
+There are about 10 concepts you need to lodged in your brain to work with React.
 
-Once you've learned those 10 or so things, the rest is just convenience and performance.
+Once you've mastered those 10ish concepts, the rest is convenience and performance.
 
-If you have it in your mind to learn react, this book is for you.
+This book is about those 10ish concepts.
 
-Let's begin.
+Let's start.

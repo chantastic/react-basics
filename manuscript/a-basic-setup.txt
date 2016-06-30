@@ -1,6 +1,6 @@
 # A Basic Setup
 
-*Copy and paste this into file on your computer.* Open it in a browser to see a basic working React app.
+*Copy and paste this into file on your computer.* Open it in a browser to see a working React app.
 
 ```
 <!DOCTYPE html>
@@ -29,47 +29,34 @@ There are three distinct sections of this file.
 
 ## React and ReactDOM script tags
 
-In the *head* of our HTML file, we're fetching the precompiled version of *React* and *ReactDOM* to kick things off.
+In the *head* of our HTML file, we're fetching versions of *React* and *ReactDOM*.
 
 ```
-<head>
-  <meta charset="utf-8">
-  <script src="https://fb.me/react-15.0.2.js"></script>
-  <script src="https://fb.me/react-dom-15.0.2.js"></script>
-</head>
+<script src="https://fb.me/react-15.0.2.js"></script>
+<script src="https://fb.me/react-dom-15.0.2.js"></script>
 ```
 
-*React* is the main player here and what this book focuses on. **We'll talk about this a lot.**
+*React* is the focus of this book.
 
-*ReactDOM* is a handful of functions that allow you to use *React* in the browser. **We won't talk about this much at all.**
+*ReactDOM* is something we won't touch much but required for any browser-based React app.
 
 ## A Single Element
 
-The only element we declare in the HTML body is a single *div* with the id *"root"*. We'll attach our React app to this element.
+Every React app needs a single DOM element to attach to. Ours is a *div* with the id *"root"*.
 
 ```
-<body>
-  <div id="root"></div>
-
-  ...
+<div id="root"></div>
 ```
 
 ## A Script Tag with React App
 
-Finally, we have the definition of our React app. It doesn't do much yet.
+Finally, we have our React app in a *script* tag. It doesn't do much yet.
 
 ```
-  ...
-
-  <script>
-    ReactDOM.render(
-      React.createElement('div', { children: "Hi there" }),
-      document.getElementById('root')
-    );
-  </script>
-</body>
+<script>
+  ReactDOM.render(
+    React.createElement('div', { children: "Hi there" }),
+    document.getElementById('root')
+  );
+</script>
 ```
-
-Our app is defined in a script tag. Everything in this book should be placed there.
-
-Now let's talk about React.

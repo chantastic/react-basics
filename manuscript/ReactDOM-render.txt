@@ -1,18 +1,8 @@
 # ReactDOM.render
 
-ReactDOM is a tiny library for transforming React Elements (we'll learn about those in a second) into DOM elements and inserting the into the DOM.
+ReactDOM is a tiny library for transforming *React Element*s (we'll learn about those in a second) into DOM elements and inserting the into the DOM. It's used at the top of every browser-based React app.
 
-This is referred to as "mounting" a *React Element*.
-
----
-
-At the root of it all, we call *ReactDOM.render*.
-
-```js
-ReactDOM.render( /* ... */ );
-```
-
-It takes two arguments to *mount* a *React Element*: the *ReactElement* and the DOM element you want to append it to.
+*ReacDOM.render* takes two arguments: a *ReactElement* and the DOM element you want it appended to.
 
 ```js
 ReactDOM.render(
@@ -23,9 +13,9 @@ ReactDOM.render(
 
 ## The DOM Element Container
 
-Let's start with the DOM element. Getting those is pretty easy.
+Let's start with the DOM element container.
 
-In our example, we just grab the one DOM element we declared in HTML and provide that as the second argument.
+In our example, we grab the one DOM element we setup in HTML and provide it as the second argument to *ReactDOM.render*.
 
 ```js
 ReactDOM.render(
@@ -38,7 +28,7 @@ ReactDOM.render(
 
 Now for the *React Element*.
 
-We can create *React Elements* with the function *React.creatElement*. Here we're creating a *'div'*. We're also providing an optional argument which we'll discuss in the next chapter.
+We create *React Elements* with the function *React.creatElement*. Here we're creating a *'div'* and passing in an object with some rendering options, which we'll discuss more in the next chapter.
 
 ```js
 ReactDOM.render(
@@ -49,6 +39,6 @@ ReactDOM.render(
 
 ---
 
-If all you wanted to learn was how to create a *div* using two external libraries and a lot of back and forth to the DOM, you're done!
+If all you wanted to learn was how to create a *div* using two external libraries and a lot of back-and-forth to the DOM, you're done!
 
 If not, keep reading.
