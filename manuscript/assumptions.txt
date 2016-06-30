@@ -1,6 +1,6 @@
 # Assumptions
 
-## Knows and Dont-Knows
+## Knows and Don't-Knows
 
 * You **know** elementary HTML.
 * You **know** elementary JavaScript.

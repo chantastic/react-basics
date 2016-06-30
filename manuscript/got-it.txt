@@ -15,7 +15,7 @@ We're doing three things:
 1. __Querying a reference to our single DOM element__, using *document.getElementById*
 1. __Rendering our *React Element* into the DOM element container__, using *React.render*
 
-## Try it out
+### Try it out
 
 If it doesn't all seem reasonable, play around a bit.
 

@@ -14,7 +14,7 @@ console.log(React.createElement('h1', { children: "Hi" }));
 
 The returned object should look something like this:
 
-```
+```js
 {
   /* a bunch of frameworky stuff */
   props: { children: "hi" },

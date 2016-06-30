@@ -4,7 +4,7 @@ This book is about React Basics.
 
 There are 10ish concepts you need lodged in your brain to work with React.
 
-Once you've mastered those 10ish concepts, the rest is convenience and performance.
+Once you've got those 10ish concepts, the rest is convenience and performance.
 
 This book is about those 10ish concepts.
 

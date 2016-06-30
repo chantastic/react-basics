@@ -2,7 +2,7 @@
 
 *Copy and paste this into file on your computer.* Open it in a browser to see a working React app.
 
-```
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,7 +31,7 @@ There are three distinct sections of this file.
 
 In the *head* of our HTML file, we're fetching versions of *React* and *ReactDOM*.
 
-```
+```html
 <script src="https://fb.me/react-15.0.2.js"></script>
 <script src="https://fb.me/react-dom-15.0.2.js"></script>
 ```
@@ -44,7 +44,7 @@ In the *head* of our HTML file, we're fetching versions of *React* and *ReactDOM
 
 Every React app needs a single DOM element to attach to. Ours is a *div* with the id *"root"*.
 
-```
+```html
 <div id="root"></div>
 ```
 
@@ -52,7 +52,7 @@ Every React app needs a single DOM element to attach to. Ours is a *div* with th
 
 Finally, we have our React app in a *script* tag. It doesn't do much yet.
 
-```
+```html
 <script>
   ReactDOM.render(
     React.createElement('div', { children: "Hi there" }),

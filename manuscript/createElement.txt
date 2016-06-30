@@ -6,20 +6,20 @@ This line creates a *React Element*:
 React.createElement('div', { children: 'Hi there' }),
 ```
 
-*React.createElement* takes two arguments. The first is required, the second is optional (but necessary).
+*React.createElement* takes two arguments, an element type and an object of properties.
 
-## Element type
+## Type
 
-The first argument is the Element type. It can be a *String* or a *Function*. For any known DOM elements, you'll use a *String*, e.g., *'div'*, *'span'*, *'h2'*, *'anchor'*, etc.
+The first argument is the Element type. For known DOM elements, you use a *String*, e.g., *'div'*, *'span'*, *'h2'*, *'a'*, etc.
 
-## props
+## Props
 
 The second argument is known as the *props* object. Right now that shouldn't mean much to you. Here's what you need to know now:
 
-* You can put key/value pairs you want in the *props* object.
-* Some keys are special.
+* You can put any key/value pair in the *props* object.
+* Some keys get special treatment.
 
-In this example, I'm using one of the special keys: *children*. This special property is providing the *innerText* of element.
+In this example, I'm using a special keys: *children*. This special property is providing the *innerText* of element.
 
 *We'll talk about which *props* get special treatment later.*
 
