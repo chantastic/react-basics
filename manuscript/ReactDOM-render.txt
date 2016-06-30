@@ -1,0 +1,54 @@
+# ReactDOM.render
+
+ReactDOM is a tiny library for transforming React Elements (we'll learn about those in a second) into DOM elements and inserting the into the DOM.
+
+This is referred to as "mounting" a *React Element*.
+
+---
+
+At the root of it all, we call *ReactDOM.render*.
+
+```js
+ReactDOM.render( /* ... */ );
+```
+
+It takes two arguments to *mount* a *React Element*: the *ReactElement* and the DOM element you want to append it to.
+
+```js
+ReactDOM.render(
+  /* Aa React Element */,
+  /* A DOM element container */
+);
+```
+
+## The DOM Element Container
+
+Let's start with the DOM element. Getting those is pretty easy.
+
+In our example, we just grab the one DOM element we declared in HTML and provide that as the second argument.
+
+```js
+ReactDOM.render(
+  /* A React Element */,
+  document.getElementById("root")
+);
+```
+
+## The React Element
+
+Now for the *React Element*.
+
+We can create *React Elements* with the function *React.creatElement*. Here we're creating a *'div'*. We're also providing an optional argument which we'll discuss in the next chapter.
+
+```js
+ReactDOM.render(
+  React.createElement('div', { children: "Hi there" }),
+  document.getElementById("root")
+);
+```
+
+---
+
+If all you wanted to learn was how to create a *div* using two external libraries and a lot of back and forth to the DOM, you're done!
+
+If not, keep reading.

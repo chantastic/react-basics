@@ -2,7 +2,7 @@
 
 This book is about React Basics.
 
-There are 10 or so concepts you need lodged in your brain to do something meaningful in React.
+There are 10 or so concepts you need to lodge in your brain if you want to work in React.
 
 Once you've learned those 10 or so things, the rest is just convenience and performance.
 

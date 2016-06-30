@@ -1,0 +1,22 @@
+# createElement
+
+This line creates a *React Element*.
+
+```js
+React.createElement('div', { children: 'Hi there' }),
+```
+
+*React.createElement* takes two arguments. The first is required, the second is optional.
+
+* First, __tag type (as a String)__
+* Second, __an object of properties__
+
+In this example, I'm using the *children*, a special proper that (in this case) provides the *innerText* element.
+
+#### Try it out
+
+To get your hands dirty change these things:
+
+* __Change element type from `div` to `h1`__. The text should be bigger and bolder now.
+* __Remove the properties object__. No text will be displayed but if you peak in the inspector, the empty element will be rendered.
+* __Put the object back, add your own greeting__. "You're a handsome|beautiful devil; What's your name" works.
