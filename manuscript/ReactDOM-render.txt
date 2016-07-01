@@ -13,24 +13,29 @@ ReactDOM.render(
 
 ## The DOM Element Container
 
-In our sample app, we get the DOM element we setup in HTML and pass it as the second argument.
+Our Dom element container is the single *div* we setup in HTML.
 
 ```js
-ReactDOM.render(
-  /* A React Element */,
-  document.getElementById("root")
-);
+document.getElementById("root")
 ```
 
 ## The React Element
 
-We create *React Elements* with the function *React.creatElement*. Here we're creating a *'div'* and passing in an object with some rendering options.
+We'll talk about *React.createElement* in the next chapter. For now you need to know that it's how we create *React Element*s for *ReactDOM.render*.
 
 ```js
-ReactDOM.render(
-  React.createElement('div', { children: "Hi there" }),
-  document.getElementById("root")
-);
+React.createElement('div', { children: "Hi there" }),
+```
+
+## Put it all together
+
+You'll see something to this affect at the root of every browser-based React app. Ours is no exception.
+
+```js
+  ReactDOM.render(
+    React.createElement('div', { children: "Hi there" }),
+    document.getElementById('root')
+  );
 ```
 
 If all you wanted to learn was how to create a *div* using two external libraries and a lot of back-and-forth to the DOM, you're done!

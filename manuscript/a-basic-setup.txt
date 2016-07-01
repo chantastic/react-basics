@@ -38,7 +38,7 @@ In the *head* of our HTML file, we're fetching versions of *React* and *ReactDOM
 
 *React* is the focus of this book.
 
-*ReactDOM* is something we won't touch much but required for any browser-based React app.
+*ReactDOM* is something we won't touch much but it's required for any browser-based React app.
 
 ## A Single Element
 
@@ -54,7 +54,7 @@ Finally, we have our React app in a *script* tag. It doesn't do much yet.
 
 ```html
 <script>
-  ReactDOM.render(
+    ReactDOM.render(
     React.createElement('div', { children: "Hi there" }),
     document.getElementById('root')
   );

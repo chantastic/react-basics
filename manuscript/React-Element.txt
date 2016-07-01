@@ -1,6 +1,6 @@
 # What's a React Element?
 
-*React Element*s are like blue prints for DOM elements. They are plain old JavaScript objects with a handful of special properties. They're lightweight and empower the famed performance of React. When passed to *ReactDOM.render* they're transformed into DOM elements.
+*React Element*s are like blue prints for DOM elements. They are plain old JavaScript objects with a handful of special properties. They're lightweight and enable the famed performance of React. When passed to *ReactDOM.render* they're transformed into DOM elements.
 
 ### Try it out
 
@@ -9,7 +9,7 @@ You can see what a *React Element* looks like by logging it to your Dev Tools co
 Paste this line into your console:
 
 ```js
-console.log(React.createElement('h1', { children: "Hi" }));
+console.log(React.createElement("h1", { children: "Hi" }));
 ```
 
 The returned object should look something like this:
@@ -17,7 +17,7 @@ The returned object should look something like this:
 ```js
 {
   /* a bunch of frameworky stuff */
-  props: { children: "hi" },
+  props: { children: "Hi" },
   type: "h1",
 }
 ```
