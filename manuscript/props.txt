@@ -1,15 +1,19 @@
 # props
 
-Remember that special object we used to make our `h1` element say "Hi"?
+Remember that *props* object from the *createElement* chapter? No? I'll recap:
 
-We can use that same object with our custom component `Greeting`. Here, I'm just passing an object with a name property.
+* The *props* object is a plain old JavaScript object.
+* You can put any key/value pair in the *props* object.
+* Some keys get special treatment.
 
-~~~ javascript
+We can use that same object with our *Greeting* component. Here, I'm providing *name* as a *prop* to *Greeting. It's value is "chan".
+
+```js
 ReactDOM.render(
   React.createElement(Greeting, { name: "Chan" }),
   document.getElementById("root")
 )
-~~~
+```
 
 ## We call this special object "props"
 

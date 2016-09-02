@@ -1,11 +1,22 @@
 # Start Here
 
-This book is about React Basics.
+Hi! Thanks for picking up this book.
 
-There are 10ish concepts you need lodged in your brain to work with React.
+Let's cut to the chase. I want you to start learning React, today.
+I can't do that if I try to teach you everything.
+You'd skip ahead, see something scary and push it off for another week.
+You paid for this book and I want you to get your money's worth TODAY.
 
-Once you've got those 10ish concepts, the rest is convenience and performance.
+If you can't teach you everything, I have to teach you the essentials, the
+absolutely necessary things.
 
-This book is about those 10ish concepts.
+I'm convinced that there are only 10 things you MUST know to make apps in React.
+This book covers those 10 things.
+Just the React.
 
-Let's start.
+If you need to learn about node, servers, build tools, state management,
+optimization, and all the other things you've heard about, you have the entire
+internet at your fingertips.
+My goal is just to get you started—just the React.
+
+Let's get started!

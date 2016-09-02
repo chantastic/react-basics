@@ -1,0 +1,51 @@
+# Components
+
+Components in React are easy. Watch carefully because you might not even realize I made one.
+
+# Making Components
+
+Let's make a React component of our *React Element* that displays "Hi" in an *h1*.
+
+Create a new variable named *Greeting*. Assign it a function that returns *React.createElement* call in the previous chapter.
+
+```
+var Greeting = function () {
+  return React.createElement("h1", { children: "Hi" })
+}
+```
+
+# Rendering Components
+
+To render our fresh component, update our *ReactDOM.render* function to use the *Greeting* component we just defined.
+
+```
+ReactDOM.render(
+  React.createElement(Greeting),
+  document.getElementById("root")
+)
+```
+
+All together, your app should look like this:
+
+```
+var Greeting = function () {
+  return React.createElement("h1", { children: "Hi" })
+}
+
+ReactDOM.render(
+  React.createElement(Greeting),
+  document.getElementById("root")
+)
+```
+
+Refresh your browser and everything should remain the same. But something changed. Now you're using components.
+
+## createElement takes functions
+
+`React.createElement` can take a function as it's first argument. We use this to create components.
+
+### Try it out
+
+* __Rename the component__. Does it still work?
+* __Pass the *Greeting* function to *ReactDOM.render* directly__. What happens?
+* __OK, put everything back__.
