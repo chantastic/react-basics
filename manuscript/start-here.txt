@@ -8,15 +8,9 @@ You'd skip ahead, see something scary and push it off for another week.
 You paid for this book and I want you to get your money's worth TODAY.
 
 If you can't teach you everything, I have to teach you the essentials, the
-absolutely necessary things.
-
-I'm convinced that there are only 10 things you MUST know to make apps in React.
+absolutely necessary things. I'm convinced that the number of absolutely
+necessary things is 10. There are only 10 things you MUST know to make apps in
+React.
 This book covers those 10 things.
-Just the React.
-
-If you need to learn about node, servers, build tools, state management,
-optimization, and all the other things you've heard about, you have the entire
-internet at your fingertips.
-My goal is just to get you started—just the React.
 
 Let's get started!
