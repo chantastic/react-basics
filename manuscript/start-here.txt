@@ -3,12 +3,12 @@
 Hi! Thanks for picking up this book.
 
 Let's cut to the chase. I want you to start learning React, today.
-I can't do that if I try to teach you everything.
+I can't help you do that, if we bite off more than we can chew.
 You'd skip ahead, see something scary and push it off for another week.
-You paid for this book and I want you to get your money's worth TODAY.
+You paid to learn React and that's what you're gonna get.
 
 If you can't teach you everything, I have to teach you the essentials, the
-absolutely necessary things. I'm convinced that the number of absolutely
+absolutely necessary things. I'm convinced that number of absolutely
 necessary things is 10. There are only 10 things you MUST know to make apps in
 React.
 This book covers those 10 things.
