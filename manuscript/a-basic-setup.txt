@@ -1,6 +1,6 @@
 # A Basic Setup
 
-*Copy and paste this into file on your computer.* Open it in a browser to see a working React app.
+*Copy and paste this into file snippet to a file title index.html.* Open it in a browser to see a working React app.
 
 ```html
 <!DOCTYPE html>
@@ -15,8 +15,8 @@
 
   <script>
     ReactDOM.render(
-      React.createElement('div', { children: "Hi there" }),
-      document.getElementById('root')
+      React.createElement("div", { children: "Hi there" }),
+      document.getElementById("root")
     );
   </script>
 </body>
@@ -25,24 +25,24 @@
 
 # A Basic Setup (explained)
 
-There are three distinct sections of this file.
+There are three sections in this file.
 
 ## React and ReactDOM script tags
 
-In the *head* of our HTML file, we're fetching versions of *React* and *ReactDOM*.
+In the *head* of our HTML file, we're including versions of *react* and *react-dom*.
 
 ```html
-<script src="https://fb.me/react-15.0.2.js"></script>
-<script src="https://fb.me/react-dom-15.0.2.js"></script>
+<script src="https://unpkg.com/react@15.3.1/dist/react.js"></script>
+<script src="https://unpkg.com/react-dom@15.3.1/dist/react-dom.js"></script>
 ```
 
-*React* is the focus of this book.
+*react-dom* is a small library, used to connect React Elements to web pages. This little snippet is the only place we'll use *ReactDOM* in this book.
 
-*ReactDOM* is something we won't touch much but it's required for any browser-based React app.
+*react.js* is the the topic of this book.
 
 ## A Single Element
 
-Every React app needs a single DOM element to attach to. Ours is a *div* with the id *"root"*.
+Every React app needs a single DOM element to connect to. Ours is a *div* with the id *"root"*. It can be anything but this is a common convention.
 
 ```html
 <div id="root"></div>
@@ -50,13 +50,16 @@ Every React app needs a single DOM element to attach to. Ours is a *div* with th
 
 ## A Script Tag with React App
 
-Finally, we have our React app in a *script* tag. It doesn't do much yet.
+Finally, we have our React app in a *script* tag.
 
 ```html
 <script>
-    ReactDOM.render(
-    React.createElement('div', { children: "Hi there" }),
-    document.getElementById('root')
-  );
+  ReactDOM.render(
+    React.createElement("div", { children: "Hi there" }),
+    document.getElementById("root")
+  )
 </script>
 ```
+
+We're using *ReactDOM.render()* to connect a React Element to the DOM element we created.
+It's not critical that you understand all of this yet. You'll get a better sense of how these fit together as you read on.
