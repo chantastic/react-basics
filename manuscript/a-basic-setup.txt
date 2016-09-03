@@ -15,7 +15,7 @@
 
   <script>
     ReactDOM.render(
-      React.createElement("div", { children: "Hi there" }),
+      React.createElement("h1", { children: "Hi there" }),
       document.getElementById("root")
     );
   </script>
@@ -55,7 +55,7 @@ Finally, we have our React app in a *script* tag.
 ```html
 <script>
   ReactDOM.render(
-    React.createElement("div", { children: "Hi there" }),
+    React.createElement("h1", { children: "Hi there" }),
     document.getElementById("root")
   )
 </script>

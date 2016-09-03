@@ -1,27 +1,37 @@
 # What's a React Element?
 
-*React Element*s are like blue prints for DOM elements. They are plain old JavaScript objects with a handful of special properties. They're lightweight and enable the famed performance of React. When passed to *ReactDOM.render* they're transformed into DOM elements.
+Our work with React starts here:
 
-### Try it out
+```js
+React.createElement("h1", { children: "Hi there" }),
+```
+
+Let's talk it through. We're using *React* to create an *h1* element with the *children* "Hi there".
+
+__So, what's a *React Element*?__
+
+*React Element*s are little blue prints for DOM elements.
+Under the hood, React uses *document.createElement* to make DOM nodes from these Elements.
+They are plain old JavaScript objects with a handful of special properties.
 
 You can see what a *React Element* looks like by logging it to your Dev Tools console.
 
 Paste this line into your console:
 
 ```js
-console.log(React.createElement("h1", { children: "Hi" }));
+console.log(React.createElement("h1"))
 ```
 
-The returned object should look something like this:
+The returned object looks like this:
 
 ```js
 {
   /* a bunch of frameworky stuff */
-  props: { children: "Hi" },
+  props: {}
   type: "h1",
 }
 ```
 
 ### Try it out
 
-Fiddle around a bit. Change the *type* and *props* object and see how the output changes.
+Fiddle around a bit. Empty *h1*s are boring. Log the same object that's being used in our app and see how that *React Element* differs from the empty *h1*.
