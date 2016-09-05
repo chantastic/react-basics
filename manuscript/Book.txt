@@ -2,3 +2,4 @@ start-here.txt
 a-basic-setup.txt
 React-Element.txt
 createElement.txt
+component-functions.txt
