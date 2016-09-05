@@ -5,7 +5,7 @@ We're going to make a component!
 Components in React are easy.
 Watch carefully or you might miss it.
 
-# Creating a component function
+## Creating a component function
 
 Move the element creation call into a function and give it a name.
 Name it `Greeting`.
@@ -16,7 +16,7 @@ var Greeting = function () {
 }
 ```
 
-# Rendering Components
+## Rendering Components
 
 To render our fresh-off-the-press component, update our *ReactDOM.render* function to use the *Greeting* component we just defined.
 
