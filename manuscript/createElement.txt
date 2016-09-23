@@ -11,25 +11,21 @@ The first argument is the type of element you'd like to create.
 You can use any tag you would use in HTML, e.g., *"div"*, *"span"*, *"h2"*, *"a"*, etc.
 In our app, we're using *"h1".
 
-## Props
+## Properties object
 
-The second argument is known as the *props* object.
-It's short for "properties".
-Here's what you need to know now:
+The second argument is all the properties needed to create the *React Element*.
+You can put any key/value pair into this object.
+Some of these properties get special treatment from React.
 
-* The *props* object is a JavaScript object.
-* You can put any key/value pair into the *props* object.
-* Some keys get special treatment.
+Our app is using one of the special properties: *children*.
+It's used to provide the *innerText* for our *h1*.
 
-Our app is using one of the special *props*: *children*.
-This special property provides the *innerText* for our *h1*.
-
-*We'll talk about special *props* later.*
+*We'll talk about special this properties object in more detail later.*
 
 #### Try it out
 
 To get your hands dirty, change these things:
 
 * __Change the element type from `h1` to `h2`__. The text should be a little smaller now.
-* __Remove the *props* object altogether__. No text will be displayed but peaking in the inspector, you'll see that empty element was rendered.
-* __Put the props object back and change the greeting__. "You're a handsome|beautiful devil; What's your name".
+* __Remove the properties object altogether__. No text will be displayed but peaking in the inspector, you'll see that empty element was rendered.
+* __Put the properties object back and change the greeting__. "You're a handsome|beautiful devil; What's your name".

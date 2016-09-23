@@ -1,12 +1,39 @@
-# props
+# Making dynamic components
 
-Remember that *props* object from the *createElement* chapter? No? I'll recap:
+Rendering static text is not why we got into JavaScript.
+Let's bring *Greeting* to life.
+
+In our *Greeting* component, we're creating a *React Element* using two arguments.
+The first is the component type: `"h1"`. The second is an object.
+
+``` js
+React.createElement("h1", { children: "Hi" })
+```
+
+In our main `render` function, we're only creating an *React Element* with one argument.
+The first is the component type: `Greeting`. And we aren't providing anything for the second.
+
+```js
+React.createElement(Greeting)
+```
+
+Let's give *Greeting* a name.
+
+## props
+
+Remember that *props* object from the *createElement* chapter?
+No?
+I'll recap:
 
 * The *props* object is a plain old JavaScript object.
+* It's the second argument taken by `React.createElement`.
 * You can put any key/value pair in the *props* object.
 * Some keys get special treatment.
 
-We can use that same object with our *Greeting* component. Here, I'm providing *name* as a *prop* to *Greeting. It's value is "chan".
+Our *Greeting* component can take this *props* object too.
+Let's give the *Greeting* component a name as *props*.
+I'll use the value "Chan".
+You can use your own name.
 
 ```js
 ReactDOM.render(
@@ -15,9 +42,19 @@ ReactDOM.render(
 )
 ```
 
-## We call this special object "props"
+Update the *Greeting* component function to receive *props* and append the name to our output.
 
-We've used this special object twice. It's seems fitting to call it by it's name. We call this the `props` object. Every component recieves props. We can put any values we want on the `props` object. It's how we give values to our components.
+``` js
+var Greeting = function (props) {
+  return React.createElement("h1", { children: "Hi " + props.name })
+}
+```
+
+## A word about props
+
+Every component recieves props.
+We can put any values we want on the `props` object.
+It's how we give values to our components.
 
 This helps us make our components dynamic.
 
@@ -27,7 +64,7 @@ Update the `Greeting` function expression to accept the `props` object.
 
 Now, instead of simply displaying "Hi", let's append the `name` on the `props` object.
 
-``` javascript
+``` js
 var Greeting = function (props) {
   return React.createElement("h1", { children: "Hi " + props.name })
 }
@@ -48,10 +85,13 @@ ReactDOM.render(
 
 ## props are values communicated to components
 
-The `props` object is how we communicate values into components. In fact, it's the only way to communicate data into components.
+The `props` object is how we communicate values into components.
+In fact, it's the only way to communicate data into components.
 
-All components take props. The custome components that we create and those who's types are DOM elements.
+All components take props.
+The custome components that we create and those who's types are DOM elements.
 
 ## Now, for something completely different
 
-We've talked a lot about custom components and DOM element components. It'd be nice to have a way writing these components that felt familiar, the way HTML feels familiar.
+We've talked a lot about custom components and DOM element components.
+It'd be nice to have a way writing these components that felt familiar, the way HTML feels familiar.
