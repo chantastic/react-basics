@@ -2,15 +2,14 @@
 
 Hi! Thanks for picking up this book.
 
-Let's cut to the chase. I want you to start learning React, today.
-I can't help you do that, if we bite off more than we can chew.
+I'll cut to the chase. I want you to start learning React, today. Right now.
+To do that, we can't get ahead of ourselves or bite off more than we can chew.
 You'd skip ahead, see something scary and push it off for another week.
-You paid to learn React and that's what you're gonna get.
+You paid to learn React and that's what we're gonna do.
 
-If you can't teach you everything, I have to teach you the essentials, the
-absolutely necessary things. I'm convinced that number of absolutely
-necessary things is 10. There are only 10 things you MUST know to make apps in
-React.
+In this book, I'll teach you what is absolutely necessary things.
+I'm convinced that the number of absolutely necessary things is 10.
+There are only 10 things you MUST know to make apps in React.
 
 This book covers those 10 things.
 
@@ -19,13 +18,15 @@ This book covers those 10 things.
 Before we start, you should have a good idea of what you're getting into and what for.
 
 I want to help you start thinking in React.
-To do that, we'll focus on the 10 things you'll need to know as a React developer.
-I will not spend any time covering new project setup in this book.
+To do that, we'll focus on the 10 things you'll need to know as a new React
+developer.
+I won't spend time covering new project setup in this book.
+It's a moving target.
 Ok, ok. I'll talk a little bit about it at the end of this book.
 
-Here are a few assumptions about you:
+Here are a few assumptions I'm making about you:
 
-* You **have** a basic understanding of HTML (elements, ids, classes, attributes,etc.)
+* You **have** a basic understanding of HTML (elements, ids, classes, attributes, etc.)
 * You **have** a basic understanding of JavaScript (functions, variables, document.getElementById, etc.)
 * You **don't** know anything about React or ES2015 (one of the newest versions of JavaScript).
 * You develop in a modern browser.
@@ -35,7 +36,7 @@ Here are a few assumptions about you:
   - Edge 14+
 
 If any of these assumptions is incorrect, put this book down and make them correct.
-You might find this book challenging without this knowledge.
+You'll find this book overly challenging without these things.
 
 If you follow the examples, here's what you can expect to gain:
 
@@ -43,4 +44,4 @@ If you follow the examples, here's what you can expect to gain:
 * The ability to read and understand most React documentation.
 * The most common ES2015 features used in React development.
 
-Alright. Let's start already!
+Sound good? Let's start!
