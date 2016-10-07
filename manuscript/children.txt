@@ -1,12 +1,37 @@
 # children
 
-```js
-class ClickCounter extends React.Component {
-  constructor() {
-    super();
-    this.state = {clicks: 0};
-  }
+There's one last thing to do.
+It might have been nagging you for the past couple chapters.
 
+`Greeting` component being displayed.
+Why is that?
+It should be; it's nested inside `ClickCounter`.
+
+```js
+var element = <ClickCounter>
+  <Greeting name="Chan" />
+</ClickCounter>;
+```
+
+JSX has a lot of similarities to HTML.
+It's what makes it useful.
+But there are times that it's HTML likeness lead us toward assumptions that aren't true.
+In this case, we might assume that that nested React Elements should be automatically rendered when nested in other React Elements.
+That's not the case.
+
+To solve this, let's think about what our `element` variable assignment might looks like without JSX.
+
+```js
+var element = React.createElement(ClickCounter, {
+  children: React.createElement(Greeting, { name: "Chan" })
+})
+```
+
+We received a `children` prop haven't told our `render` function what to do with it.
+
+Let's fix that by placing it above the display clicks.
+
+```js
   render() {
     return (
       <div onClick={() => this.setState({clicks: this.state.clicks + 1})}>
@@ -15,5 +40,12 @@ class ClickCounter extends React.Component {
       </div>
     );
   }
-}
 ```
+
+Now we see the child `Greeting` component, in all it's glory.
+It too can be clicked to trigger the `ClickCounter` event.
+
+### Explore
+
+* Insert more React Elements inside `ClickCounter`. Do they show up as expected?
+* Change the event type. Try counting how many times the mouse enters.
