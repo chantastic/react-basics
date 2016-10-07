@@ -7,7 +7,7 @@ Watch carefully or you might miss it.
 
 ## Creating a component function
 
-Move the element creation call into a function and give it a name.
+Move the createElement call into a function and give it a name.
 Name it `Greeting`.
 
 ```js
@@ -16,9 +16,15 @@ var Greeting = function () {
 }
 ```
 
+And because we're focusing on modern JavaScript, lets define this function with an arrow and `const`.
+
+```js
+const Greeting = () => React.createElement("h1", { children: "Hi" })
+```
+
 ## Rendering Components
 
-To render our fresh-off-the-press component, update our *ReactDOM.render* function to use the *Greeting* component we just defined.
+To render our fresh-off-the-press component, update our *React.createElement* function to use the *Greeting* component we just defined.
 
 ```
 ReactDOM.render(
@@ -30,9 +36,7 @@ ReactDOM.render(
 All together, your app should look like this:
 
 ```
-var Greeting = function () {
-  return React.createElement("h1", { children: "Hi" })
-}
+const Greeting = () => React.createElement("h1", { children: "Hi" })
 
 ReactDOM.render(
   React.createElement(Greeting),
@@ -47,7 +51,7 @@ You made a new component!
 ## createElement takes functions
 
 We've discovered a new truth about `React.createElement`.
-`React.creatElement` can use a function to create new *React Element*s, if that function returns a *React Element*.
+`React.creatElement` can use a function to create new *React Elements*.
 
 Good job. Pat yourself on the back!
 

@@ -28,17 +28,19 @@ In our case, we'd like to write fancy-pants JSX and transform it to plain-old Ja
 
 ## Where do I get a JavaScript transformer?
 
-There are a number of JavaScript transformers. The most popular one is [Babel](http://babeljs.io/). And fortunately, it has the best support for JSX.
+There are a number of JavaScript transformers. The most popular one is [Babel](http://babeljs.io/).
+It also has the best support for JSX.
 
 ## What's Babel?
 
 Babel is a configurable, pluggable JavaScript transformer. It does a lot.
 
-We only need it to transform `<h1>Hi</hi>` into `React.createClass("h1", { children: "Hi" })`.
+Right now, we only need it to transform `<h1>Hi</hi>` into `React.createClass("h1", { children: "Hi" })`.
 
 ## How do I use JSX in my app?
 
-That depends on what type of app writing. Fortunately there are a lot of good resources for Rails, .NET, Node, Phoenix, and others.
+That depends on what type of app writing.
+Fortunately there are a lot of good resources for Rails, .NET, Node, Phoenix, and others.
 
 For our purposes, we just need it to work in our HTML page.
 
@@ -59,8 +61,8 @@ The new `head` should look like this:
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
 
-  <script src="https://fb.me/react-15.0.2.js"></script>
-  <script src="https://fb.me/react-dom-15.0.2.js"></script>
+  <script src="https://fb.me/react-15.3.2.js"></script>
+  <script src="https://fb.me/react-dom-15.3.2.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
 </head>
 ```
@@ -83,7 +85,8 @@ Adding the `type="text/babel"` attribute means that we expect Babel to transform
 
 You don't need to understand JSX to learn React.
 
-What you need to know is why `return <div>whatever</div>` doesn't result in a syntax error. The reason is JSX and Babel.
+What you need to know is why `return <div>whatever</div>` doesn't result in a syntax error.
+The reason is JSX and Babel.
 
 You'll understand what's going as you use it more.
 
@@ -117,7 +120,7 @@ ReactDOM.render(
 
 ## What do the curly braces do?
 
-In JSX, anything side curly braces will be evaluated as an expression.
+In JSX, anything inside curly braces will be evaluated as an expression.
 
 ```
 {1 + 1} // 2
@@ -157,7 +160,7 @@ These are identical in JSX:
 <div></div>
 ```
 
-These are similar. We'll learn why not identical in another book.
+These are similar.
 
 ```
 <div children="Hi" />
@@ -168,8 +171,10 @@ These are similar. We'll learn why not identical in another book.
 
 You made it. Time for coffee, or kambucha, or something.
 
-JSX is interesting. It's important to learn because all React documentation uses it.
+JSX is interesting.
+It's important to learn because it's used in all the React docs.
 
-Unfortunately, the JSX abstraction is "[leaky](http://www.joelonsoftware.com/articles/LeakyAbstractions.html)." You'll do well to always remember that JSX syntax is just a wrapper around `React.createClass`.
+Unfortunately, the JSX abstraction is "[leaky](http://www.joelonsoftware.com/articles/LeakyAbstractions.html)."
+You'll do well to always remember that JSX syntax is just a wrapper around `React.createClass`.
 
-[1] OK. Not *exactly* the identical. I'll show you how I lied a little bit here later in the book.
+[1] OK. Not *exactly* the identical. I'll show you how I lied later in the book.

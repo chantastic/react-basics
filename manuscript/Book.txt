@@ -2,5 +2,10 @@ start-here.txt
 a-basic-setup.txt
 React-Element.txt
 createElement.txt
+arrow-functions.txt
+const.txt
 component-functions.txt
 props.txt
+jsx.txt
+midpoint-recap.txt
+component-class.txt

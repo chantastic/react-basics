@@ -1,7 +1,11 @@
 # createElement
 
-Now we know that *React Elements* are just objects blue prints for DOM elements.
-Let's talk a little more about this `React.createElement` function.
+Now we know a little about *React Elements*.
+Their plain old JavaScript objects that describe DOM elements.
+
+Let's talk about the one that we're creating in our app.
+
+To create *React Elements*, we use the function `React.createElement`.
 
 *createElement* takes two arguments, an element *type* and an object of properties.
 
@@ -9,13 +13,12 @@ Let's talk a little more about this `React.createElement` function.
 
 The first argument is the type of element you'd like to create.
 You can use any tag you would use in HTML, e.g., *"div"*, *"span"*, *"h2"*, *"a"*, etc.
-In our app, we're using *"h1".
+In our app, we're using *"h1"*.
 
 ## Properties object
 
 The second argument is all the properties needed to create the *React Element*.
-You can put any key/value pair into this object.
-Some of these properties get special treatment from React.
+You can put any key/value pair into this object but some of these properties get special treatment from React.
 
 Our app is using one of the special properties: *children*.
 It's used to provide the *innerText* for our *h1*.

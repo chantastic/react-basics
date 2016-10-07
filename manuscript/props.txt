@@ -3,21 +3,17 @@
 Rendering static text is not why we got into JavaScript.
 Let's bring *Greeting* to life.
 
-In our *Greeting* component, we're creating a *React Element* using two arguments.
-The first is the component type: `"h1"`. The second is an object.
+We've been able to customize our React Elements by providing an object to `createElement`.
+Let's see if we can do that with components we've defined.
 
-``` js
-React.createElement("h1", { children: "Hi" })
-```
-
-In our main `render` function, we're only creating an *React Element* with one argument.
-The first is the component type: `Greeting`. And we aren't providing anything for the second.
+Right now, we're not creating `Greeting` with any additional properties.
+Properties get passed as an object to ` r rs-ncreateElement`.
 
 ```js
 React.createElement(Greeting)
 ```
 
-Let's give *Greeting* a name.
+But we know we can put anything in this object. So, let's give *Greeting* a name.
 
 ## props
 
@@ -45,6 +41,8 @@ ReactDOM.render(
 Update the *Greeting* component function to receive *props* and append the name to our output.
 
 ``` js
+const Greeting = (props) => React.createElement("h1", { children: "Hi" + props.name })
+
 var Greeting = function (props) {
   return React.createElement("h1", { children: "Hi " + props.name })
 }

@@ -11,7 +11,7 @@ In this book, I'll teach you what is absolutely necessary things.
 I'm convinced that the number of absolutely necessary things is 10.
 There are only 10 things you MUST know to make apps in React.
 
-This book covers those 10 things.
+This book covers those 10, plus some helpful es2015 features you'll want to know.
 
 # About you and this book
 

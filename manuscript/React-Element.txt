@@ -6,13 +6,14 @@ Our work with React starts here:
 React.createElement("h1", { children: "Hi there" }),
 ```
 
-Let's talk it through. We're using *React* to create an *h1* element with the *children* "Hi there".
+Let's talk it through. We're using *React* to create an *h1* element.
+It's created with a property *children*, evaluating the string "Hi there".
 
 __So, what's a *React Element*?__
 
 *React Element*s are little blue prints for DOM elements.
-Under the hood, React uses *document.createElement* to make DOM nodes from these Elements.
-They are plain old JavaScript objects with a handful of special properties.
+They are plain old JavaScript objects that describe native DOM elements—their text, their style, everything.
+They also have a handful of special properties that are React-specific.
 
 You can see what a *React Element* looks like by logging it to your Dev Tools console.
 
@@ -26,7 +27,7 @@ The returned object looks like this:
 
 ```js
 {
-  /* a bunch of frameworky stuff */
+  /* a bunch of framework stuff */
   props: {}
   type: "h1",
 }
@@ -34,4 +35,6 @@ The returned object looks like this:
 
 ### Try it out
 
-Fiddle around a bit. Empty *h1*s are boring. Log the same object that's being used in our app and see how that *React Element* differs from the empty *h1*.
+Empty *h1*s are boring.
+Log out the `createElement` call we're using in our app.
+How is it different that the empty `h1`?
