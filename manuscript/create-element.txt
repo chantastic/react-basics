@@ -1,0 +1,5 @@
+# createElement
+
+```js
+var element = React.createElement("h1", {children: "Hello!"});
+```

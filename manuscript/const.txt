@@ -1,20 +1,9 @@
 # const
 
-`const` is a way of defining variables that cannot be reassigned.
-Run these lines in your browser console.
-
 ```js
-const example = "You can't change me."
-example = "I'm gonna try."
-// => TypeError: Assignment to constant variable.
-```
+// es5 var
+var Greeting = (props) => <div>Hi {props.name}</div>;
 
-When you use `const` instead of `var`, you can't reassign that variable.
-
-### What that means for React
-
-If we use `const` to assign a React component to a variable, we can rest assured that variable will never be reassigned.
-
-```
-const MyComponent = (props) => React.createElement('div', "you can't change me!")
+// es2015 const
+const Greeting = (props) => <div>Hi {props.name}</div>;
 ```

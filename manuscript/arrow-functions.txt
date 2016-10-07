@@ -1,39 +1,11 @@
 # Arrow functions
 
-Arrow functions are a new feature of JavaScript.
-They provide a couple niceties over traditional JavaScript functions.
-
-## No `function` keyword
-
-Arrow functions drop the `function` keyword.
-Look at these two equivalent examples.
-
-```
-// es5
-var increment = function (x) { return x + 1 }
-
-// es2015
-var increment = (x) => { return x + 1 }
-```
-
-## Implicit return
-
-Arrow functions have an implied return, for one-line functions.
-
-```
-// es5
-var increment = function (x) { return x + 1 }
-
-// es2015
-var increment = (x) => x + 1
-```
-
-*You'll still have to use a function block and explicit return for functions longer than one line.*
-
-## What this means for React
-
-Because of it's terseness many components are quite often written using arrow functions.
-
 ```js
-var MyComponent = (props) => React.createElement('div', props)
+// es5 function
+function Greeting (props) {
+  return <div>Hi {props.name}</div>
+}
+
+// es2015 arrow function
+var Greeting = (props) => <div>Hi {props.name}</div>;
 ```

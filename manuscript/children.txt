@@ -1,0 +1,19 @@
+# children
+
+```js
+class ClickCounter extends React.Component {
+  constructor() {
+    super();
+    this.state = {clicks: 0};
+  }
+
+  render() {
+    return (
+      <div onClick={() => this.setState({clicks: this.state.clicks + 1})}>
+        {this.props.children}
+        (clicks: {this.state.clicks})
+      </div>
+    );
+  }
+}
+```

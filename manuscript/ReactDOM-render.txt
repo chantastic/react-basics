@@ -1,43 +1,5 @@
 # ReactDOM.render
 
-ReactDOM is a tiny library for transforming and inserting *React Element*s into the DOM.
-
-*ReacDOM.render* takes two arguments: a *React Element* and a DOM element.
-
 ```js
-ReactDOM.render(
-  /* Aa React Element */,
-  /* A DOM element container */
-);
+ReactDOM.render(element, container);
 ```
-
-## The DOM Element Container
-
-Our Dom element container is the single *div* we setup in HTML.
-
-```js
-document.getElementById("root")
-```
-
-## The React Element
-
-We'll talk about *React.createElement* in the next chapter. For now you need to know that it's how we create *React Element*s for *ReactDOM.render*.
-
-```js
-React.createElement('div', { children: "Hi there" }),
-```
-
-## Put it all together
-
-You'll see something to this affect at the root of every browser-based React app. Ours is no exception.
-
-```js
-  ReactDOM.render(
-    React.createElement('div', { children: "Hi there" }),
-    document.getElementById('root')
-  );
-```
-
-If all you wanted to learn was how to create a *div* using two external libraries and a lot of back-and-forth to the DOM, you're done!
-
-If not, keep reading.

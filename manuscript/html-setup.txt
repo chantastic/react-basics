@@ -1,0 +1,24 @@
+# HTML Setup
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Learn React Basics</title>
+    <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+    <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+      var element = React.createElement("h1", {children: "Hello!"});
+      var container = document.getElementById("root");
+
+      ReactDOM.render(element, container);
+    </script>
+  </body>
+</html>
+```
