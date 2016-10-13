@@ -12,3 +12,5 @@ state.txt
 setstate.txt
 children.txt
 end-here.txt
+{backmatter}
+alternate-setups.txt

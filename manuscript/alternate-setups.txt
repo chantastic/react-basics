@@ -1,0 +1,101 @@
+# Alternate setups
+
+You should be able to run all the examples the code bin of your choice.
+
+Here are a couple setup instructions for the most popular code bins.
+
+## JSFiddle
+
+The React team has setup JSFiddle that is kept up to date.
+You can find it here: https://jsfiddle.net/reactjs/69z2wepo/
+
+Paste this JavaScript into the JavaScript section and you're good to go.
+
+```js
+var element = React.createElement("h1", {children: "Hello!"});
+var container = document.getElementById("container");
+
+ReactDOM.render(element, container);
+```
+
+### Differences
+
+The JSFiddle uses the id `container`.
+Chapter 1 assumes that it's `root`.
+The id itself doesn't matter but make sure that the selector and DOM id match.
+
+
+{pagebreak}
+
+## JSBin
+
+Paste this base HTML into the `HTML` pane.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Learn React Basics</title>
+    <script src="https://unpkg.com/react/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom/dist/react-dom.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+    </script>
+  </body>
+</html>
+```
+
+Paste the boilerplate JS int the `JavaScript` pane.
+
+```js
+var element = React.createElement("h1", {children: "Hello!"});
+var container = document.getElementById("root");
+
+ReactDOM.render(element, container);
+```
+
+Set the `JavaScript` processor to `JSX(React)` or `ES6/Babel`.
+
+
+
+{pagebreak}
+
+## Codepen
+
+Paste this base HTML into the `HTML` pane.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Learn React Basics</title>
+    <script src="https://unpkg.com/react/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom/dist/react-dom.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+    </script>
+  </body>
+</html>
+```
+
+Paste the boilerplate JS int the `JS` pane.
+
+```js
+var element = React.createElement("h1", {children: "Hello!"});
+var container = document.getElementById("root");
+
+ReactDOM.render(element, container);
+```
+
+Set the `JavaScript` processor to `Babel`.
+
+*Alternatively, you can add `react` and `react-dom` in the "Add External JavaScript" dialog.
+It works either way you prefer to set it up.
