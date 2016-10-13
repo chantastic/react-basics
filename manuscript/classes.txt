@@ -1,0 +1,56 @@
+# Classes
+
+So, we have a problem we need to solve.
+We need a place to store the number of times our `ClickCounter` component has been clicked.
+We can't do that when our React Element is just the result of a function.
+We need something that gives us an instance object we can update.
+
+Most problems in React are can be solved with JavaScript.
+This is no exception.
+We can solve our problem with a JavaScript `class`.
+
+## Using ES2015 classes
+
+`class` is new to JavaScript.
+So I'll take you through a brief tour.
+
+You can paste these examples into your Dev Tools console.
+
+```js
+// create a Counter class
+class Counter {}
+
+// create an instance of the Counter
+const counterInstance = new Counter;
+
+console.log(counterInstance)
+// => Counter {}
+```
+
+## extending classes
+
+We can create classes that extend other classes.
+For example, we could make a `CardCounter` that `extends` `Counter`.
+
+We can also define a `constructor` to build new instances with initial values.
+
+```
+// create a ClickCounter class that extends Counter
+class ClickCounter extends Counter {
+  constructor() {
+    super();
+    this.state = {clicks: 0};
+  }
+}
+
+// create an instance of ClickCounter
+const clickCounterInstance = new ClickCounter;
+
+console.log(clickCounterInstance.state);
+// => {clicks: 0}
+```
+
+---
+
+Now we have a JavaScript solution for our state problem.
+Let's see if React has React has a component class that we can extend.

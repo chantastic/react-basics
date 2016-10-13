@@ -1,26 +1,37 @@
 # createElement
 
-Checkout `element` variable.
+Now we can talk about our `element` variable.
 
 ```js
 var element = React.createElement("h1", {children: "Hello!"});
 ```
 
-`React.createElement()` is creating a React Element for us to render.
-React Elements are like blueprints for DOM elements.
+`react` is the second of the three libraries we've included.
 
-With the first argument, I can specify which "type" of element I.
+`React.createElement()` is responsible for creating React Elements.
+These the types of elements that `ReactDOM` knows how to render into the browser.
+
+## What's a React Element
+
+React Elements are blueprints for DOM elements.
+They *aren't* DOM elements.
+They're little objects with specifications for creating DOM elements.
+
+## How to use `React.createElement`
+
+With the first argument, I can specify the "type" of my React Element.
 I want this to be a big `h1`.
 
-The second argument is an object of key and value to further specify the Element.
-`children` is a special key that specifies any child elements.
+The second argument is an object to further specify the React Element.
+I'm using the special key `children` to specify the child node of my `h1`.
 I want the the child element to be the text "Hello!".
 
-KEEP ALERT!
+### KEEP ALERT!
 
 __All React Elements are created like this.__
-I'll your memory on this later.
+I'll test how well you remembered this later.
 
-### Explore
-* Change the `type` of element we're rendering. Maybe make the message a little more salty that "Hello!".
-* __Advanced:__ Use `React.createElement()` to provide the value for `children`
+### Kick the tires
+* Change the `type` of our React Element.
+* Change the message to be a little more salty that "Hello!".
+* __Advanced:__ `children` can be a React Element. Change the value of `children` to be a React Element. You'll need to change this back before moving forward.

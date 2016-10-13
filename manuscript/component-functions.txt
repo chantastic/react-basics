@@ -1,11 +1,10 @@
 # Component functions
 
-Finally, we're out of the boilerplate and can write some React!
+Finally, we're out of the boilerplate and we can write React!
 
 When you heard about React, you probably heard "it does components."
 It does.
 But writing components can be so subtle, you might miss.
-Check this out.
 
 ```js
 function Greeting() {
@@ -16,14 +15,14 @@ function Greeting() {
 BOOM!
 A React component.
 
-"Wait", you're saying, "isn't that just JSX `React.createElement` wrapped in a function named Greeting?"
+"Wait, isn't that just JSX `React.createElement` wrapped in a function named Greeting?"
 
-If you are saying that, I'm super proud of you.
-Because that's exactly what's happening.
+If you are saying that, I'm so proud of you.
+That's __exactly__ what's happening.
 
-The here is that `React.createElement` is clever.
-We can give it functions for the Element type argument.
-Meaning we can create this Element using the `Greeting` function name.
+`React.createElement` is clever.
+In addition to a string, it takes a function as the first argument.
+Meaning we can create a React Element from our `Greeting` function.
 
 ```js
 var element = React.createElement(Greeting);
@@ -35,10 +34,10 @@ But we're using JSX, so it looks like this:
 var element = <Greeting />;
 ```
 
-Congratulations.
-You made your first React component.
-It's pretty boring but we'll make it more lively with `props`.
+Against all the odds, you made your first React component.
+It doesn't do much but it's all yours.
+We'll make it a little more lively with `props`.
 
-### Explore
-* If you didn't use JSX, do it.
-* Change the name of the `Greeting` component. Are there things that work and don't work? Can it start with a lowercase letter? Can it have dashes?
+### Kick the tires
+* If you didn't use JSX, do it this chapter.
+* Toy with the name of the `Greeting` component. Can the name start with a lowercase letter? Can it have underscores?

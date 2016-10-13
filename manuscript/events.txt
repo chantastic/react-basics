@@ -1,11 +1,10 @@
 # Events
 
-Events are how we respond to user interaction.
-A user can click, scroll, swipe, hover, etc.
-When they do so on interested elements, we want to handle that.
+Let's create a new component.
+To kick things off,
+let's make a component that `alert`s an incremented click count every time it's clicked.
 
-Let's create a new `ClickCounter` component.
-Every time it's clicked, it should alert the number of times it's been clicked.
+Let's start with a component function named `ClickCounter`.
 
 ```js
 const ClickCounter = () => (
@@ -15,19 +14,32 @@ const ClickCounter = () => (
 )
 ```
 
-Let's change our `element` assignment to use the `ClickCounter` instead of the `Greeting` component.
+Change our `element` assignment to render the `ClickCounter` instead of our `Greeting` component.
 
 ```js
 const element = <ClickCounter />;
 ```
 
-Keep `Greeting` around.
-It'll come in handy later.
-
 Now click the new component.
-You'll notice that it doesn't do a great job of counting.
-It always displays `0` and always alerts `1`.
-That's half of what we need, if we only click it once.
+It will alert every time it's clicked.
+Unfortunately, it only ever alerts `1` and always displays `0`.
+It's not a great click counter.
+But we learned how to use events!
 
-We're going to fix this.
-But first, we need talk the second type of React component: component class.
+## React Synthetic Events
+
+If you've been around the JavaScript block, this `onClick` prop might look strange.
+In HTML the attribute name is `onclick` (all lowercase).
+And most frontend developers discourage their use.
+
+React doesn't use the attribute-style event handlers.
+It wraps browser-native events in React `SynthenticEvent`s.
+It's smart and reliable.
+Right now, the details aren't important.
+Just note the difference in capitalization.
+
+A list of available React's `SyntheticEvent`s is available at [https://facebook.github.io/react/docs/events.html](https://facebook.github.io/react/docs/events.html).
+
+### Kick the tires
+
+* Play around with different event types. Try `DoubleClick`, `MouseEnter`, and `MouseLeave`.

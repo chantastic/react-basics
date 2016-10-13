@@ -1,19 +1,21 @@
 # Arrow functions
 
-We're gonna learn some new JavaScript.
+Let's learn some new JavaScript.
 
-Arrow functions are a new syntax, added with ES2015.
-Arrow functions are used *everywhere* in React.
-If you master one new ES2015 syntax, make Arrow functions it.
+If there's one new syntax you should commit to memory, it should be [arrow functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+These show up everywhere in React.
+And they're a very popular way to define component functions.
 
-Before we talk about new syntax, let's talk about the difference between a [function declaration]() and a [function expression]().
+Before we talk about new syntax, let's talk about the difference between a [function declaration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function) and a [function expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
 ```js
 // function declaration
 function Greeting (props) {
   return <div>Hello {props.name}!</div>
 }
+```
 
+```js
 // function expression
 var Greeting = function (props) {
   return <div>Hello {props.name}!</div>
@@ -21,12 +23,12 @@ var Greeting = function (props) {
 ```
 
 They're very similar.
-The first declares a new named function.
+The first declares a named function.
 The second assigns an anonymous function to the variable `Greeting`.
 
-Arrow functions are like function expressions.
+Arrow functions are function expressions.
 They assign an anonymous function to a variable.
-But they do it with fewer characters.
+But they do so with fewer characters.
 
 ```js
 // function expression
@@ -38,18 +40,17 @@ var Greeting = function (props) {
 var Greeting = (props) => <div>Hello {props.name}!</div>;
 ```
 
-Note the 3 obvious changes:
+Note the 3 syntax changes:
 
-* The `function` keyword is completely removed.
-* The block curly braces are not required (for one liners).
+* The `function` keyword is removed.
+* The curly braces are optional (for one liners).
 * The `return` value is implied (for one liners).
 
-This syntax is so terse and readable, it's how many folks define their component functions.
+This syntax is so terse and readable, many folks use it define component functions.
 
-Arrow functions provide one other major benefit.
-I'll leave that as an exercise to find what it is.
-(*Hint*: it has to do with `this`)
+Arrow functions provide one other major benefit that isn't immediately obvious.
+We'll talk about that invisible difference later in the book.
 
-### Explore
-* Write `add`, a function that adds two numbers, as an arrow function.
-* __Advanced:__ Use an arrow function as an argument to a higher order function. `.map()` over an array without using `function`, `return`, or `{}`.
+### Kick the tires
+* For giggles, write an `add` function using an arrow function expression. You can just do it in the Dev Tools console.
+* __Advanced:__ Use an arrow function as an argument to a higher order function. `[1,2,3].map()` is a good place to start. Don't use `function`, `return`, or `{}`.

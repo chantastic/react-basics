@@ -1,7 +1,8 @@
 # HTML Setup
 
 React works in every popular browser today, right out of the box.
-To illustrate that, every example in this book will use this simple HTML file.
+
+To illustrate that, every example in this book will uses this simple HTML file.
 
 ```html
 <!DOCTYPE html>
@@ -26,15 +27,10 @@ To illustrate that, every example in this book will use this simple HTML file.
 </html>
 ```
 
-Save it somewhere on your local machine and open it in a browser.
-You'll see a working React app.
+Save it on your local machine and open it in a browser and code editor.
 
-Now, open it in an editor.
 We're gonna get our hands dirty.
-
-If you have extra time, type it all in.
-You'll learn more than copy/pasting it.
 
 ---
 
-*If you prefer to work in JSFiddle, JSBin, or Codepen, I have sample setups in the last pages of this book.*
+*If you prefer to work in JSFiddle, JSBin, or Codepen, I have setups at the end of this book.*

@@ -1,13 +1,14 @@
 # props
 
-Believe it or not, you already know `props`.
+I'm gonna let you in on a little secret.
+You already know what `props` are.
+I used them to create the initial `h1` element.
 
-Remember in chapter 2,
-the object we pass to `React.createElement` with all the specifications for our element?
+Remember the object we pass to `React.createElement` with all the specifications for our element?
 That object is called called the `props` object.
 It's short for `properties`.
 
-Our component function takes that `props` object as an argument.
+Our component function accepts this `props` object as an argument.
 
 ```js
 function Greeting (props) {
@@ -15,24 +16,30 @@ function Greeting (props) {
 }
 ```
 
-We can then use keys from are `props` object inside our component.
+We can then use keys from the `props` object inside our component.
 
 ```js
 function Greeting (props) {
-  return <div>Hello {props.name}!</div>
+  return <div>Hello {props.name}!</div>;
 }
 ```
 
-Notice that we're using curly braces around the `props.name`.
+## JSX Interpolation
+
+In JSX, we use using curly braces to evaluate certain expressions.
+Notice that `props.name` is wrapped curly braces.
 This communicates to the JSX transformer that `props.name` should be evaluated,
-not displayed.
+not displayed as a literal string of characters.
 
-Now we have the component setup.
-How do we get that `name` prop into the component?
-Now that we're using JSX, we aren't feeding props in as an object.
-JSX lets us feed them in as attributes.
+## Passing `props` in JSX
 
-Add a `name` prop to our `element`.
+Our component is setup to use `props.name`.
+But how do we get that `name` prop into the component, now that we're using JSX?
+We use attributes, just like we would in HTML.
+
+Add a `name` prop to our `Greeting` element.
+I'll use my name.
+Feel free to use your own.
 
 ```js
 var element = <Greeting name="Chan" />;
@@ -41,6 +48,6 @@ var element = <Greeting name="Chan" />;
 Now we have a component that can be rendered with a dynamic name.
 Awesome!
 
-### Explore
-* Update the component to take a `punctuation` prop. Use `props.punctuation` instead of the static `!`.
-* __Advanced:__ In chapter two, I suggested that you render `element` to many 2-or-more DOM nodes. Try that again. This time, render the same component with a different `props.name`.
+### Kick the tires
+* Update the component to take a `punctuation` prop. Then, interplate `props.punctuation` in place of the static `!`.
+* __Advanced:__ In chapter two, I suggested that you render `element` into 2 DOM elements. Try that again. This time, render the same component with a different `name`.
