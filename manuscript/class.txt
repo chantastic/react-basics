@@ -1,0 +1,43 @@
+# Class
+
+Before we dive into React component classes,
+you should know about a bit about JavaScript classes.
+
+Like `const` and arrow functions, `class` was introduced with ES2015.
+It's implemented in the latest version of all major browsers.
+Don't believe me?
+Try it out.
+
+Type these lines into your dev tools console:
+
+```
+class Counter {}
+
+const counterInstance = new Counter;
+
+console.log(counterInstance)
+// => Counter {}
+```
+
+It's a totally a thing.
+
+classes can extend other classes.
+We could create a `CardCounter` class that `extends` `Counter`.
+
+We can also define a `constructor` to build new instances with initial values.
+
+```
+class ClickCounter extends Counter {
+  constructor() {
+    super();
+    this.state = {clicks: 0};
+  }
+}
+
+const clickCounterInstance = new ClickCounter;
+
+console.log(clickCounterInstance.state);
+// => {clicks: 0}
+```
+
+In the next chapter we'll extend React's `Component` class to create components with initial state values.

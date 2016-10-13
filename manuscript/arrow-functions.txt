@@ -1,11 +1,55 @@
 # Arrow functions
 
+We're gonna learn some new JavaScript.
+
+Arrow functions are a new syntax, added with ES2015.
+Arrow functions are used *everywhere* in React.
+If you master one new ES2015 syntax, make Arrow functions it.
+
+Before we talk about new syntax, let's talk about the difference between a [function declaration]() and a [function expression]().
+
 ```js
-// es5 function
+// function declaration
 function Greeting (props) {
-  return <div>Hi {props.name}</div>
+  return <div>Hello {props.name}!</div>
 }
 
-// es2015 arrow function
-var Greeting = (props) => <div>Hi {props.name}</div>;
+// function expression
+var Greeting = function (props) {
+  return <div>Hello {props.name}!</div>
+}
 ```
+
+They're very similar.
+The first declares a new named function.
+The second assigns an anonymous function to the variable `Greeting`.
+
+Arrow functions are like function expressions.
+They assign an anonymous function to a variable.
+But they do it with fewer characters.
+
+```js
+// function expression
+var Greeting = function (props) {
+  return <div>Hello {props.name}!</div>
+}
+
+// arrow function expression (ES2015)
+var Greeting = (props) => <div>Hello {props.name}!</div>;
+```
+
+Note the 3 obvious changes:
+
+* The `function` keyword is completely removed.
+* The block curly braces are not required (for one liners).
+* The `return` value is implied (for one liners).
+
+This syntax is so terse and readable, it's how many folks define their component functions.
+
+Arrow functions provide one other major benefit.
+I'll leave that as an exercise to find what it is.
+(*Hint*: it has to do with `this`)
+
+### Explore
+* Write `add`, a function that adds two numbers, as an arrow function.
+* __Advanced:__ Use an arrow function as an argument to a higher order function. `.map()` over an array without using `function`, `return`, or `{}`.

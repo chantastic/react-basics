@@ -1,12 +1,46 @@
 # props
 
+Believe it or not, you already know `props`.
+
+Remember in chapter 2,
+the object we pass to `React.createElement` with all the specifications for our element?
+That object is called called the `props` object.
+It's short for `properties`.
+
+Our component function takes that `props` object as an argument.
+
 ```js
 function Greeting (props) {
-  return <div>Hi {props.name}</div>
+  // ...
 }
-
-var element = <Greeting name="Chan" />;
-var container = document.getElementById("root");
-
-ReactDOM.render(element, container);
 ```
+
+We can then use keys from are `props` object inside our component.
+
+```js
+function Greeting (props) {
+  return <div>Hello {props.name}!</div>
+}
+```
+
+Notice that we're using curly braces around the `props.name`.
+This communicates to the JSX transformer that `props.name` should be evaluated,
+not displayed.
+
+Now we have the component setup.
+How do we get that `name` prop into the component?
+Now that we're using JSX, we aren't feeding props in as an object.
+JSX lets us feed them in as attributes.
+
+Add a `name` prop to our `element`.
+
+```js
+var element = <Greeting name="Chan" />;
+```
+
+Now we have a component that can be rendered with a dynamic name.
+Awesome!
+
+### Explore
+* Update the component to take a `punctuation` prop. Use `props.punctuation` instead of the static `!`.
+* __Advanced:__ In chapter two, I suggested that you render `element` to many 2-or-more DOM nodes. Try that again. This time, render the same component with a different `props.name`.

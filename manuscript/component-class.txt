@@ -1,19 +1,37 @@
 # Component class
 
+So, we have a problem.
+As a component function, `ClickCounter` doesn't have a way of retaining state.
+We need some place to store how many times our component has been clicked.
+
+We can't keep using the component function.
+We need something that will create new instances of a component.
+This is were ES2015 classes come in.
+
+Let's rewrite `Clickcounter` as a component class.
+To get what we need from React, we'll `extend` the `React.Component` base class.
+
 ```js
 class ClickCounter extends React.Component {
   render() {
-    return <div>(clicks: 0)</div>
+    return (
+      <div onClick={() => alert(1)}>
+        (clicks: 0)
+      </div>
+    );
   }
 }
-
-const Greeting = (props) => <div>Hi {props.name}</div>
-
-var element = <ClickCounter>
-  <Greeting name="Chan" />
-</ClickCounter>;
-
-var container = document.getElementById("root");
-
-ReactDOM.render(element, container);
 ```
+
+Let's cover the obvious changes.
+
+* Our component was defined as a function. Now it's a class.
+* Our component class `extends` `React.Component`
+* It contains a `render` function, which returns our our React Element.
+* The React Element is—so far—unchanged.
+* A component classes `render` function returns a React Element, just as our function did.
+
+Without changing the `ReactDOM.render` call, our app should still work.
+Test it out to be sure.
+
+Now we need to assign an initial state value and update it when the component is clicked.

@@ -1,12 +1,27 @@
 # End Here
 
-You've done great. If you made it this far, you know enough about React to start building something.
+## Congratulations
 
-Go, push the boundaries of what you know. You'll find out what you don't know. When you have some questions, move onto the next book.
+You did it!
+You know everything you need to know to make interactive React components.
 
-Here are some ideas to get the creative juices flowing.
+Start pushing the boundaries of what you've learned.
+Make a tic-tac-toe game, a stopwatch, and a mock shopping cart.
+You can do it all with what you've learned here.
 
-* Add other interactions to go along with our Click state. How many times a user scrolls, hits a key, or hovers.
-* Write a component that fetches character info from one of the characters in the SWAPI or POKEAPI and presents it in a nice format. Bonus points if you use one component to handle state and pass them to another component with props.
-  * The ids for both APIs are auto-incrementing. Start with id 1. Add a button that allows someone to go forward and backword through profiles.
-* Create a stopwatch using setInterval to increment a timer
+## Next steps
+
+As you play around with components, you'll need to learn more about forms.
+Forms are notoriously tricky in React.
+They've tripped up many a great developer.
+I hope to cover this in another book.
+Until then, the React documentation is your friend.
+
+## Thank you
+
+Thanks for reading this book.
+The sale of this book supports free resources like [reactcheatsheet.com](http://reactcheatsheet.com) and [reactpatterns.com](http://reactpatterns.com).
+
+As always, @chantastic on Twitter(http://twitter.com/chantastic) and [Github](http://github.com/chantastic).
+
+**Carry on nerds!**

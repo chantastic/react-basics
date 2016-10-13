@@ -1,9 +1,74 @@
 # JSX
 
+`Reacte.createElement` is great!
+It does everything we need *but* it can be a little cumbersome to type and read.
+
+This brings us to our third included script tag: `babel`.
+
+So, what's JSX and why do I get it with Babel?
+I thought you'd never ask.
+
+## What's JSX?
+
+JSX is way to let the computer write `React.creatElement()`,
+for every React Element.
+
+Here's what our function looks like in JSX vs JavaScript.
+
 ```js
 // JavaScript
-React.createElement("h1", { children: "Hi" });
+React.createElement("h1", { children: "Hello!" });
 
 // JSX
-<h1>Hi</h1>;
+<h1>Hello!</h1>;
 ```
+
+## How does it work?
+
+JSX is not valid JavaScript.
+So, it has to be transformed into `React.createElement()` calls before the browser can understand it.
+It works in the provided app because of this line:
+
+```html
+    <script type="text/babel">
+```
+
+Our script tag is being read as "babel" and transformed to browser-ready JavaScript.
+
+You can think it as working working like a function that's run on your code:
+
+```js
+Babel.transform("<h1>Hello!</h1>");
+// => React.createElement("h1", {children: "Hello!"})
+```
+
+## What's Babel and why is JSX inside of it?
+
+Babel is a general purpose transformer for JavaScript.
+It takes syntax of one form and makes it something browsers can execute.
+In version 5, JSX was included in Babel by default.
+It makes examples like this very simple to setup.
+But once you start writing real apps, you'll need something more robust.
+
+## So, why are we talking about JSX?
+
+JSX is the linga franca of React.
+Most importantly, the documentation is written in JSX.
+
+You have to know the relationship between JSX and React to be successful in React.
+
+That said, it's completely optional.
+
+When I started writing React,
+I couldn't use JSX.
+It was too complicated to setup in my Rails app.
+So, I used function calls.
+
+Today, I use JSX for everything.
+I find it a much more enjoyable authoring experience.
+And, again, it's how most developers author React.
+
+The rest of this book will use JSX.
+
+### Explore
+* Convert our `React.createElement()` call to JSX. I assume that it's JSX in the later chapters.

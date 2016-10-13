@@ -1,5 +1,36 @@
 # ReactDOM.render
 
+It's a little weird that we have to load three script to start working with one library.
+Here's why:
+
+React can be used to write web apps, server-side web apps, native apps, VR experiences, 3d games, terminal programs.
+It can be a lot of places.
+So, to keep the library small and focused, you have to use a companion library for platform.
+We're working using React in the browser.
+So, `react-dom` is for us.
+
+`react-dom` provides a only three functions.
+Fortunately, you only need to know about one: `ReactDOM.render()`.
+
+`ReactDOM.render()` takes an React Element and puts DOM, wherever you tell it to.
+It takes two arguments to do exactly that.
+
 ```js
 ReactDOM.render(element, container);
 ```
+
+Ignore `element`, for now.
+Let's focus on the the `container`.
+I'm grabbing a reference to an empty div with the id "root".
+
+```js
+var container = document.getElementById("root");
+```
+
+`ReactDOM.render()` can bind to any element in the DOM.
+`div#root` is a common convention but the exact name is unimportant.
+
+### Explore
+* Change the selector to query for an `id` that suits your liking better. Changing the `id` won't affect later chapters.
+* __Advanced:__ `ReactDOM.render()` can be used to mount React Elements into any number of DOM containers. Create a two or three unique DOM containers and render the `element` into each.
+* __Advanced:__ Add an `id` key to the object. How does it get rendered in the DOM?

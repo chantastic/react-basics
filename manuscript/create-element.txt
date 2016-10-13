@@ -1,5 +1,26 @@
 # createElement
 
+Checkout `element` variable.
+
 ```js
 var element = React.createElement("h1", {children: "Hello!"});
 ```
+
+`React.createElement()` is creating a React Element for us to render.
+React Elements are like blueprints for DOM elements.
+
+With the first argument, I can specify which "type" of element I.
+I want this to be a big `h1`.
+
+The second argument is an object of key and value to further specify the Element.
+`children` is a special key that specifies any child elements.
+I want the the child element to be the text "Hello!".
+
+KEEP ALERT!
+
+__All React Elements are created like this.__
+I'll your memory on this later.
+
+### Explore
+* Change the `type` of element we're rendering. Maybe make the message a little more salty that "Hello!".
+* __Advanced:__ Use `React.createElement()` to provide the value for `children`

@@ -6,6 +6,8 @@ component-function.txt
 props.txt
 arrow-functions.txt
 const.txt
+events.txt
+class.txt
 component-class.txt
 events.txt
 state.txt

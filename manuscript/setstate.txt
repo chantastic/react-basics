@@ -1,18 +1,28 @@
 # setState
 
-```js
-class ClickCounter extends React.Component {
-  constructor() {
-    super();
-    this.state = {clicks: 0};
-  }
+React has one primary method of updating UI.
+It's the one function used to update state: `setState`.
 
-  render() {
-    return (
+To update UI in React, you update the data a component is derived from.
+That data is stored some as `state`.
+To change state we use `setState`.
+
+Let's update `ClickCounter`.
+Instead of just alerting data changes, let's `setState`.
+
+```js
       <div onClick={() => this.setState({clicks: this.state.clicks + 1})}>
         (clicks: {this.state.clicks})
       </div>
-    );
-  }
-}
 ```
+
+If everything is wired up correctly,
+you'll see the displayed number of `clicks` update as you `click` the element.
+
+Get friendly with this function.
+It's the one method React provides for updating UI.
+
+## Explore
+
+* Change the event type. Instead of counting `Click`, try `MouseEnter` or `DoubleClick`.
+* Add multiple events. Count `Click`, `MouseEnter`, and `MouseLeave`. Add properties to your `state` object to track each event independently.

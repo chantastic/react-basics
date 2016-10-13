@@ -1,11 +1,12 @@
 # children
 
 There's one last thing to do.
-It might have been nagging you for the past couple chapters.
+It might have been nagging you for the past few chapters.
 
-`Greeting` component being displayed.
+Our `Greeting` component isn't being displayed.
 Why is that?
-It should be; it's nested inside `ClickCounter`.
+It's nested inside `ClickCounter`.
+It seems like it should be showing.
 
 ```js
 var element = <ClickCounter>
@@ -14,12 +15,15 @@ var element = <ClickCounter>
 ```
 
 JSX has a lot of similarities to HTML.
-It's what makes it useful.
-But there are times that it's HTML likeness lead us toward assumptions that aren't true.
-In this case, we might assume that that nested React Elements should be automatically rendered when nested in other React Elements.
+That's what makes it a useful abstraction.
+However, its HTML likeness can be misleading.
+In this case, we assume that that nested React Elements should be automatically rendered.
 That's not the case.
 
-To solve this, let's think about what our `element` variable assignment might looks like without JSX.
+To fix this, we must explicitly render the nested React Elements.
+
+To understand what's happening, let's look our `element` assignment.
+Consider how it might be written without JSX.
 
 ```js
 var element = React.createElement(ClickCounter, {
@@ -27,9 +31,10 @@ var element = React.createElement(ClickCounter, {
 })
 ```
 
-We received a `children` prop haven't told our `render` function what to do with it.
+`ClickCounter` gets a `children` prop but we don't use it in the `render` function.
 
-Let's fix that by placing it above the display clicks.
+Let's fix that.
+In between a set of JSX curly braces, add `this.props.children`.
 
 ```js
   render() {
@@ -47,5 +52,4 @@ It too can be clicked to trigger the `ClickCounter` event.
 
 ### Explore
 
-* Insert more React Elements inside `ClickCounter`. Do they show up as expected?
-* Change the event type. Try counting how many times the mouse enters.
+* Add more React Elements nested inside `ClickCounter`. Do they show up as expected?

@@ -1,5 +1,8 @@
 # HTML Setup
 
+React works in every popular browser today, right out of the box.
+To illustrate that, every example in this book will use this simple HTML file.
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -13,7 +16,7 @@
   <body>
     <div id="root"></div>
 
-    <script>
+    <script type="text/babel">
       var element = React.createElement("h1", {children: "Hello!"});
       var container = document.getElementById("root");
 
@@ -22,3 +25,16 @@
   </body>
 </html>
 ```
+
+Save it somewhere on your local machine and open it in a browser.
+You'll see a working React app.
+
+Now, open it in an editor.
+We're gonna get our hands dirty.
+
+If you have extra time, type it all in.
+You'll learn more than copy/pasting it.
+
+---
+
+*If you prefer to work in JSFiddle, JSBin, or Codepen, I have sample setups in the last pages of this book.*

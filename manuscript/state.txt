@@ -1,5 +1,37 @@
 # state
 
+Identifying state—in a React component—is an important skill to have.
+
+Look at our `ClickCounter` component.
+Can you spot the state?
+
+It's the static `0` that represents the number of times we've clicked this element.
+
+In React, we store state on a component instance.
+We set that up in a component class `constructor` function.
+This function will will setup each instance of a component.
+We want initialize each instance with the initial state of `0` clicks.
+
+```js
+class ClickCounter extends React.Component {
+  constructor() {
+    super();
+    this.state = {clicks: 0};
+  }
+
+  render() {
+    // ...
+  }
+}
+```
+
+One of the unique quicks of ES2015 `class` is that you have to call `super()` at the top of your `constructor`.
+It's just part of the implementation.
+Write a constructor, call `super()` before doing anything else.
+
+Now that we've initialized our component with state,
+we can update the render function to use that state, instead of our static `0`.
+
 ```js
 class ClickCounter extends React.Component {
   constructor() {
@@ -16,3 +48,8 @@ class ClickCounter extends React.Component {
   }
 }
 ```
+
+### Explore
+
+* Change the initial value of `clicks` in the state object. Does everything display and alert as expected?
+* Add some additional state (anything will do). Display it in your `render` function.

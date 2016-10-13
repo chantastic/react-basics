@@ -1,12 +1,44 @@
 # Component functions
 
+Finally, we're out of the boilerplate and can write some React!
+
+When you heard about React, you probably heard "it does components."
+It does.
+But writing components can be so subtle, you might miss.
+Check this out.
+
 ```js
 function Greeting() {
-  return <div>Hi</div>
+  return <div>Hello!</div>;
 }
-
-var element = <Greeting />
-var container = document.getElementById("root");
-
-ReactDOM.render(element, container);
 ```
+
+BOOM!
+A React component.
+
+"Wait", you're saying, "isn't that just JSX `React.createElement` wrapped in a function named Greeting?"
+
+If you are saying that, I'm super proud of you.
+Because that's exactly what's happening.
+
+The here is that `React.createElement` is clever.
+We can give it functions for the Element type argument.
+Meaning we can create this Element using the `Greeting` function name.
+
+```js
+var element = React.createElement(Greeting);
+```
+
+But we're using JSX, so it looks like this:
+
+```js
+var element = <Greeting />;
+```
+
+Congratulations.
+You made your first React component.
+It's pretty boring but we'll make it more lively with `props`.
+
+### Explore
+* If you didn't use JSX, do it.
+* Change the name of the `Greeting` component. Are there things that work and don't work? Can it start with a lowercase letter? Can it have dashes?

@@ -1,47 +1,17 @@
 # Start here
 
-Hi! Thanks for picking up this book.
+Let me cut to the chase.
+I want you to start learning React, today.
 
-I'll cut to the chase. I want you to start learning React, today. Right now.
-To do that, we can't get ahead of ourselves or bite off more than we can chew.
-You'd skip ahead, see something scary and push it off for another week.
-You paid to learn React and that's what we're gonna do.
+Learning React has probably been on your back burner for months.
+Let's put it on the front burner; check it off your list.
 
-In this book, I'll teach you what is absolutely necessary things.
-I'm convinced that the number of absolutely necessary things is 10.
-There are only 10 things you MUST know to make apps in React.
+This book is written to be totally consumed in about 45 minutes.
+You don't need to know anything about React to start.
+You don't need to know anything about ES2015 to start.
+You don't need to know anything about Node, Gulp, Grunt, Webpack, or Babel at any point in this book.
+You just need a modern web browser, a little JavaScript familiarity, and 45 minutes.
 
-This book covers those 10, plus some helpful es2015 features you'll want to know.
+If you don't got that, come back when you do.
 
-# About you and this book
-
-Before we start, you should have a good idea of what you're getting into and what for.
-
-I want to help you start thinking in React.
-To do that, we'll focus on the 10 things you'll need to know as a new React
-developer.
-I won't spend time covering new project setup in this book.
-It's a moving target.
-Ok, ok. I'll talk a little bit about it at the end of this book.
-
-Here are a few assumptions I'm making about you:
-
-* You **have** a basic understanding of HTML (elements, ids, classes, attributes, etc.)
-* You **have** a basic understanding of JavaScript (functions, variables, document.getElementById, etc.)
-* You **don't** know anything about React or ES2015 (one of the newest versions of JavaScript).
-* You develop in a modern browser.
-  - Firefox 51+
-  - Chrome 52+
-  - Safari 10+
-  - Edge 14+
-
-If any of these assumptions is incorrect, put this book down and make them correct.
-You'll find this book overly challenging without these things.
-
-If you follow the examples, here's what you can expect to gain:
-
-* A rock solid foundation of React components.
-* The ability to read and understand most React documentation.
-* The most common ES2015 features used in React development.
-
-Sound good? Let's start!
+If you do got that, let's begin.
